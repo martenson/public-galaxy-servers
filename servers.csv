@@ -1,14 +1,29 @@
-name,url,version,registration_required,support
-ABiMS,http://galaxy3.sb-roscoff.fr/,,,support.abims@sb-roscoff.fr
-Genomics Virtual Lab Melbourne,http://galaxy-mel.genome.edu.au/galaxy/,,yes,help@genome.edu.au
-Genomics Virtual Lab Queensland,https://galaxy-qld.genome.edu.au/galaxy/,,,help@genome.edu.au
-Biomina,http://biominavm-galaxy.biomina.be/galaxy/,,,geert.vandeweyer@uantwerpen.be
-GigaGalaxy,http://galaxy.cbiit.cuhk.edu.hk/,,,support@cbiit.cuhk.edu.hk
-CBiB Galaxy,http://services.cbib.u-bordeaux2.fr/galaxy/,,,admin.cbib@u-bordeaux2.fr
-Erasmus MC,https://bioinf-galaxian.erasmusmc.nl/galaxy/,17.05,,a.stubbs@erasmusmc.nl
-Whale Shark,http://whaleshark.georgiaaquarium.org/,,,development@georgiaaquarium.org
-LiSIs,http://lisis.cs.ucy.ac.cy/,,yes,support@lisis.cs
-GalaxEast,http://use.galaxeast.fr/,,yes,galaxy@igbmc.fr
-Pitagora-Galaxy,http://try.pitagora-galaxy.org/galaxy/,,,yamanaka@genome.rcast.u-tokyo.ac.jp
-Main,https://usegalaxy.org,17.05,,clements@galaxyproject.org
+name                             ,url                                         ,version,registration_required,support                            ,location,tags
+ABiMS                            ,http://galaxy3.sb-roscoff.fr/               ,       ,                     ,support.abims@sb-roscoff.fr        ,FR      ,genomics
+Genomics Virtual Lab Melbourne   ,http://galaxy-mel.genome.edu.au/galaxy/     ,       ,yes                  ,help@genome.edu.au                 ,AU      ,
+Genomics Virtual Lab Queensland  ,https://galaxy-qld.genome.edu.au/galaxy/    ,       ,                     ,help@genome.edu.au                 ,AU      ,
+Biomina                          ,http://biominavm-galaxy.biomina.be/galaxy/  ,       ,                     ,geert.vandeweyer@uantwerpen.be     ,AU      ,genomics
+GigaGalaxy                       ,http://galaxy.cbiit.cuhk.edu.hk/            ,       ,                     ,support@cbiit.cuhk.edu.hk          ,HK      ,
+GigaGalaxy                       ,http://gigagalaxy.net/                      ,       ,                     ,                                   ,HK      ,
+CBiB Galaxy                      ,http://services.cbib.u-bordeaux2.fr/galaxy/ ,       ,                     ,admin.cbib@u-bordeaux2.fr          ,FR      ,genomics
+Erasmus MC                       ,https://bioinf-galaxian.erasmusmc.nl/galaxy/,17.05  ,                     ,a.stubbs@erasmusmc.nl              ,NL      ,
+Whale Shark                      ,http://whaleshark.georgiaaquarium.org/      ,       ,                     ,development@georgiaaquarium.org    ,US      ,
+LiSIs                            ,http://lisis.cs.ucy.ac.cy/                  ,       ,yes                  ,support@lisis.cs                   ,        ,
+GalaxEast                        ,http://use.galaxeast.fr/                    ,       ,yes                  ,galaxy@igbmc.fr                    ,FR      ,
+Pitagora-Galaxy                  ,http://try.pitagora-galaxy.org/galaxy/      ,       ,                     ,yamanaka@genome.rcast.u-tokyo.ac.jp,JP      ,
+Main                             ,https://usegalaxy.org                       ,17.05  ,                     ,https://galaxyproject.org/support/ ,US      ,genomics
+DBCLS Galaxy                     ,http://galaxy.dbcls.jp/                     ,       ,                     ,atsuko@dbcls.jp                    ,JP      ,
+Galaxy@GenOuest                  ,https://galaxy.genouest.org                 ,       ,yes                  ,support@genouest.org               ,FR      ,
+Galaxy@PRABI                     ,http://galaxy.prabi.fr/                     ,16.10  ,                     ,galaxy-support@listes.univ-lyon1.fr,FR      ,
+Galaxy@Pasteur                   ,https://galaxy.pasteur.fr/                  ,17.01  ,                     ,galaxy@pasteur.fr                  ,FR      ,
+Galaxy Sigenae / BioInfo Genotoul,http://sigenae-workbench.toulouse.inra.fr/  ,       ,yes                  ,sigenae-support@listes.inra.fr     ,FR      ,
+Galaxy Melbourne                 ,http://galaxy-mel.genome.edu.au/            ,       ,yes                  ,https://www.gvl.org.au             ,AU      ,
+GVL-QLD                          ,https://galaxy-qld.genome.edu.au/galaxy     ,16.04  ,                     ,https://www.gvl.org.au/            ,AU      ,
+GVL-Tutorial                     ,http://galaxy-tut.genome.edu.au/galaxy/     ,       ,yes                  ,help@uq.edu.au                     ,AU      ,tutorial
+Institut Curie Galaxy            ,https://galaxy-public.curie.fr/             ,       ,yes                  ,galaxy.contact@curie.fr            ,FR      ,
+NELLY                            ,http://www.bioinformatica.ucr.ac.cr:8080/   ,16.07  ,                     ,                                   ,CR      ,
+ballaxy                          ,https://ballaxy.bioinf.uni-sb.de            ,       ,                     ,ball-user-list@googlegroups.com    ,DE      ,
+BIPAA                            ,https://bipaa-galaxy.genouest.org           ,       ,yes                  ,bipaa@inra.fr                      ,FR      ,
+
+
 
