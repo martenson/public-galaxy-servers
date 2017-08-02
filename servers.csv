@@ -66,7 +66,7 @@ Antigen Receptor Galaxy                  ,https://bioinf-galaxian.erasmusmc.nl/a
 APOSTL Galaxy                            ,http://apostl.moffitt.org/                           ,bornea27@gmail.com                                                         ,        ,tools           ,16.04  ,
 ARGs-OAP Galaxy                          ,http://smile.hku.hk/SARGs                            ,zhangt@hku.hk                                                              ,HK      ,tools           ,16.07  ,
 BioCiphers Galaxy                        ,http://avispa.biociphers.org/                        ,avispa@biociphers.org                                                      ,        ,tools           ,       ,yes
-BioMaS Galaxy                            ,http://galaxy.cloud.ba.infn.it:8080/                 ,"bruno.fosso@gmail.com,giacinto.donvito@ba.infn.it"                        ,IT      ,tools           ,       ,yes
+BioMaS Galaxy                            ,http://galaxy.cloud.ba.infn.it:8080/                 ,bruno.fosso@gmail.com\,giacinto.donvito@ba.infn.it                        ,IT      ,tools           ,       ,yes
 BISTRO Galaxy                            ,http://galaxy.bioinfo-bistro.fr/galaxy/              ,akress@unistra.fr                                                          ,FR      ,tools           ,       ,
 BitLAB Galaxy                            ,http://pistacho.ac.uma.es/galaxy/                    ,                                                                           ,ES      ,tools           ,       ,yes
 CART                                     ,http://cart.embl.de/                                 ,                                                                           ,        ,tools           ,       ,
