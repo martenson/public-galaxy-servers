@@ -1,5 +1,8 @@
 # public-galaxy-servers
 
+Machine readable list of Galaxy public server instances.
+
+
 never complete - feel free to help 
 
 known sources:
