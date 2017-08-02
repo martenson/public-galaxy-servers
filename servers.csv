@@ -1,29 +1,83 @@
-name                             ,url                                         ,version,registration_required,support                            ,location,tags
-ABiMS                            ,http://galaxy3.sb-roscoff.fr/               ,       ,                     ,support.abims@sb-roscoff.fr        ,FR      ,genomics
-Genomics Virtual Lab Melbourne   ,http://galaxy-mel.genome.edu.au/galaxy/     ,       ,yes                  ,help@genome.edu.au                 ,AU      ,
-Genomics Virtual Lab Queensland  ,https://galaxy-qld.genome.edu.au/galaxy/    ,       ,                     ,help@genome.edu.au                 ,AU      ,
-Biomina                          ,http://biominavm-galaxy.biomina.be/galaxy/  ,       ,                     ,geert.vandeweyer@uantwerpen.be     ,AU      ,genomics
-GigaGalaxy                       ,http://galaxy.cbiit.cuhk.edu.hk/            ,       ,                     ,support@cbiit.cuhk.edu.hk          ,HK      ,
-GigaGalaxy                       ,http://gigagalaxy.net/                      ,       ,                     ,                                   ,HK      ,
-CBiB Galaxy                      ,http://services.cbib.u-bordeaux2.fr/galaxy/ ,       ,                     ,admin.cbib@u-bordeaux2.fr          ,FR      ,genomics
-Erasmus MC                       ,https://bioinf-galaxian.erasmusmc.nl/galaxy/,17.05  ,                     ,a.stubbs@erasmusmc.nl              ,NL      ,
-Whale Shark                      ,http://whaleshark.georgiaaquarium.org/      ,       ,                     ,development@georgiaaquarium.org    ,US      ,
-LiSIs                            ,http://lisis.cs.ucy.ac.cy/                  ,       ,yes                  ,support@lisis.cs                   ,        ,
-GalaxEast                        ,http://use.galaxeast.fr/                    ,       ,yes                  ,galaxy@igbmc.fr                    ,FR      ,
-Pitagora-Galaxy                  ,http://try.pitagora-galaxy.org/galaxy/      ,       ,                     ,yamanaka@genome.rcast.u-tokyo.ac.jp,JP      ,
-Main                             ,https://usegalaxy.org                       ,17.05  ,                     ,https://galaxyproject.org/support/ ,US      ,genomics
-DBCLS Galaxy                     ,http://galaxy.dbcls.jp/                     ,       ,                     ,atsuko@dbcls.jp                    ,JP      ,
-Galaxy@GenOuest                  ,https://galaxy.genouest.org                 ,       ,yes                  ,support@genouest.org               ,FR      ,
-Galaxy@PRABI                     ,http://galaxy.prabi.fr/                     ,16.10  ,                     ,galaxy-support@listes.univ-lyon1.fr,FR      ,
-Galaxy@Pasteur                   ,https://galaxy.pasteur.fr/                  ,17.01  ,                     ,galaxy@pasteur.fr                  ,FR      ,
-Galaxy Sigenae / BioInfo Genotoul,http://sigenae-workbench.toulouse.inra.fr/  ,       ,yes                  ,sigenae-support@listes.inra.fr     ,FR      ,
-Galaxy Melbourne                 ,http://galaxy-mel.genome.edu.au/            ,       ,yes                  ,https://www.gvl.org.au             ,AU      ,
-GVL-QLD                          ,https://galaxy-qld.genome.edu.au/galaxy     ,16.04  ,                     ,https://www.gvl.org.au/            ,AU      ,
-GVL-Tutorial                     ,http://galaxy-tut.genome.edu.au/galaxy/     ,       ,yes                  ,help@uq.edu.au                     ,AU      ,tutorial
-Institut Curie Galaxy            ,https://galaxy-public.curie.fr/             ,       ,yes                  ,galaxy.contact@curie.fr            ,FR      ,
-NELLY                            ,http://www.bioinformatica.ucr.ac.cr:8080/   ,16.07  ,                     ,                                   ,CR      ,
-ballaxy                          ,https://ballaxy.bioinf.uni-sb.de            ,       ,                     ,ball-user-list@googlegroups.com    ,DE      ,
-BIPAA                            ,https://bipaa-galaxy.genouest.org           ,       ,yes                  ,bipaa@inra.fr                      ,FR      ,
+name,url,version,registration_required,support,location,tags
+ABiMS,http://galaxy3.sb-roscoff.fr/,,,support.abims@sb-roscoff.fr,FR,genomics
+Genomics Virtual Lab Melbourne,http://galaxy-mel.genome.edu.au/galaxy/,,yes,help@genome.edu.au,AU,
+Genomics Virtual Lab Queensland,https://galaxy-qld.genome.edu.au/galaxy/,,,help@genome.edu.au,AU,
+Biomina,http://biominavm-galaxy.biomina.be/galaxy/,,,geert.vandeweyer@uantwerpen.be,AU,genomics
+GigaGalaxy,http://galaxy.cbiit.cuhk.edu.hk/,,,support@cbiit.cuhk.edu.hk,HK,
+GigaGalaxy,http://gigagalaxy.net/,,,,HK,
+CBiB Galaxy,http://services.cbib.u-bordeaux2.fr/galaxy/,,,admin.cbib@u-bordeaux2.fr,FR,genomics
+Erasmus MC,https://bioinf-galaxian.erasmusmc.nl/galaxy/,17.05,,a.stubbs@erasmusmc.nl,NL,
+Whale Shark,http://whaleshark.georgiaaquarium.org/,,,development@georgiaaquarium.org,US,
+LiSIs,http://lisis.cs.ucy.ac.cy/,,yes,support@lisis.cs,,
+GalaxEast,http://use.galaxeast.fr/,,yes,galaxy@igbmc.fr,FR,
+Pitagora-Galaxy,http://try.pitagora-galaxy.org/galaxy/,,,yamanaka@genome.rcast.u-tokyo.ac.jp,JP,
+Main,https://usegalaxy.org,17.05,,,US,genomics
+DBCLS Galaxy,http://galaxy.dbcls.jp/,,,atsuko@dbcls.jp,JP,
+Galaxy@GenOuest,https://galaxy.genouest.org,,yes,support@genouest.org,FR,
+Galaxy@PRABI,http://galaxy.prabi.fr/,16.10,,galaxy-support@listes.univ-lyon1.fr,FR,
+Galaxy@Pasteur,https://galaxy.pasteur.fr/,17.01,,galaxy@pasteur.fr,FR,
+Galaxy Sigenae / BioInfo Genotoul,http://sigenae-workbench.toulouse.inra.fr/,,yes,sigenae-support@listes.inra.fr,FR,
+Galaxy Melbourne,http://galaxy-mel.genome.edu.au/,,yes,,AU,
+GVL-QLD,https://galaxy-qld.genome.edu.au/galaxy,16.04,,,AU,
+GVL-Tutorial,http://galaxy-tut.genome.edu.au/galaxy/,,yes,help@uq.edu.au,AU,tutorial
+Institut Curie Galaxy,https://galaxy-public.curie.fr/,,yes,galaxy.contact@curie.fr,FR,
+NELLY,http://www.bioinformatica.ucr.ac.cr:8080/,16.07,,,CR,
+ballaxy,https://ballaxy.bioinf.uni-sb.de,,,ball-user-list@googlegroups.com,DE,
+BIPAA,https://bipaa-galaxy.genouest.org,,yes,bipaa@inra.fr,FR,
+CAPER 2,http://111.198.139.90/caper2,,,wangdanburnett@163.com,CN,
+CPT,https://cpt.tamu.edu/galaxy-pub/,17.01,,esr+gxfaq@tamu.edu,US,phage
+Cistrome,http://cistrome.org/ap/root,,yes,cistrome@googlegroups.com,,chip-seq
+CoSSci,http://socscicompute.ss.uci.edu/,,,,US,social-science
+Dintor,http://dintor.eurac.edu/,,,,,
+Galaxy-CEFAP,http://cefap.icb.usp.br/galaxy,,yes,geninfo@icb.usp.br.,BR,
+GIO,http://gio.sbcs.qmul.ac.uk/,,yes,,UK,
+Galaxy-P,https://usegalaxyp.org/,17.01,,help@msi.umn.edu,US,proteomics
+PGTB Galaxy,https://galaxy-pgtp.pierroton.inra.fr,,yes,,FR,
+Genomic Hyperbrowser,http://hyperbrowser.uio.no/hb/,16.01,,hyperbrowser-requests@usit.uio.no,NO,
+GO Galaxy,http://galaxy.berkeleybop.org/,,,,,
+GrAPPA,https://grappa.eecs.utk.edu/grappa/,,yes,grappa@utk.edu,,
+IAPT,http://cloudimaging.net.au/,,,admin@cloudimaging.net.au,AU,
+ImmPort Galaxy,http://immportgalaxy.org/,,yes,immport-galaxy@immport.org,US,
+IRRI Galaxy,http://galaxy.irri.org/,,,,,
+LAPPS Grid,http://galaxy.lappsgrid.org/,16.07,,,,nlp
+MetaDP,http://metadp.cn:7001/,,,,,
+MISSISSIPPI,http://mississippi.fr/,17.05,,christophe.antoniewski@upmc.fr,FR,
+Nebula,http://nebula.curie.fr/,,,galaxy.contact@curie.fr,FR,
+Oqtans,https://galaxy.inf.ethz.ch/,16.04,,galaxy@raetschlab.org,CH,
+Orione,http://orione.crs4.it/,,,galaxyadmin@crs4.it,IT,
+OSDDlinux LiveGalaxy,http://osddlinux.osdd.net:8001/,,,osddlinux@gmail.com,,drug
+MPDS,http://mpds.osdd.net/,,,mpds.gnsmmg@gmail.com,IN,chemoinformatics
+PhenoMeNal,http://public.phenomenal-h2020.eu/,17.05,,,,
+PlantGenIE,http://galaxy.plantgenie.org:8080/,,,,,
+RepeatExplorer 1,http://repeatexplorer.umbr.cas.cz/,,,admin@repeatexplorer.org,CZ,
+RepeatExplorer 2,https://repeatexplorer-elixir.cerit-sc.cz/galaxy/,16.07,yes,regalaxy@rt.cesnet.cz,CZ,
+RiboGalaxy,http://ribogalaxy.ucc.ie/,,,,IE,
+RNA-Rocket,http://rnaseq.pathogenportal.org/,,,,,
+RNA-Seq Portal,http://weizhongli-lab.org:8088,,yes,,US,rna-seq
+SCDE,http://discovery.hsci.harvard.edu/galaxy/,,,,US,
+South Green Galaxy,http://galaxy.southgreen.fr/galaxy/,16.07,,,FR,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
+,,,,,,
 
 
 
