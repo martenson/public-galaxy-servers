@@ -86,7 +86,7 @@ MBAC Metabiome Portal                    ,http://mbac.gmu.edu:8080/             
 MGEScan on Galaxy Workflow System        ,http://149.165.158.125:38080/                        ,                                                                           ,US      ,tools           ,17.09  ,
 MiModD NacreousMap                       ,http://mapping-by-sequencing.vm.uni-freiburg.de:8080/,mimodd@googlegroups.com                                                    ,DE      ,tools           ,15.07  ,
 MPI-HLR Bioinformatics                   ,https://bioinformatics.mpi-bn.mpg.de/                ,                                                                           ,        ,tools           ,       ,
-NGS-QC Galaxy                            ,http://galaxy.ngs-qc.org/                            ,"marco@igbmc.fr,mohameds@igbmc.fr"                                         ,        ,tools           ,       ,yes
+NGS-QC Galaxy                            ,http://galaxy.ngs-qc.org/                            ,marco@igbmc.fr\,mohameds@igbmc.fr                                         ,        ,tools           ,       ,yes
 ODoSE                                    ,http://www.odose.nl/                                 ,                                                                           ,NL      ,tools           ,       ,
 Osiris Galaxy                            ,http://galaxy-dev.cnsi.ucsb.edu/osiris/              ,                                                                           ,        ,tools           ,       ,
 Galaxy Palfinder                         ,https://palfinder.ls.manchester.ac.uk                ,peter.briggs@manchester.ac.uk                                              ,UK      ,tools           ,       ,yes
@@ -97,10 +97,10 @@ QBRC Galaxy                              ,http://www.galaxy.qbrc.org/           
 RDF2Graph                                ,http://semantics.systemsbiology.nl/RDF2Graph/        ,                                                                           ,        ,tools           ,       ,
 SIFTED Galaxy                            ,http://thebrain.bwh.harvard.edu/sifted.html          ,                                                                           ,US      ,tools           ,       ,
 SymD server                              ,http://symd.nci.nih.gov                              ,taic@mail.nih.gov                                                          ,        ,tools           ,       ,
-USMI Galaxy Demonstrator                 ,http://bioinformatics.hsanmartino.it:8080            ,"danielepierpaolo.colobraro@hsanmartino.it,paolo.romano@hsanmartino.it"    ,IT      ,tools           ,15.10  ,
+USMI Galaxy Demonstrator                 ,http://bioinformatics.hsanmartino.it:8080            ,danielepierpaolo.colobraro@hsanmartino.it\,paolo.romano@hsanmartino.it    ,IT      ,tools           ,15.10  ,
 VarCap Galaxy                            ,http://galaxy.csb.univie.ac.at:8080                  ,                                                                           ,        ,tools           ,       ,yes
 Vinther Lab                              ,http://galaxy.bio.ku.dk/                             ,                                                                           ,DK      ,tools           ,       ,yes
-Wageningen UR Galaxy                     ,http://galaxy.wur.nl/                                ,"galaxy@wur.nl,eric.kuijt@wur.nl,alex.bossers@wur.nl,pieter.lukasse@wur.nl",NL      ,tools           ,       ,
+Wageningen UR Galaxy                     ,http://galaxy.wur.nl/                                ,galaxy@wur.nl\,eric.kuijt@wur.nl\,alex.bossers@wur.nl\,pieter.lukasse@wur.nl,NL      ,tools           ,       ,
 ZBIT Bioinformatics Toolbox              ,http://webservices.cs.uni-tuebingen.de               ,galaxy@listserv.uni-tuebingen.de                                           ,DE      ,tools           ,15.05  ,
 Freiburg Galaxy                          ,http://galaxy.uni-freiburg.de                        ,galaxy@informatik.uni-freiburg.de                                          ,DE      ,                ,17.05  ,yes
 GenOuest Galaxy                          ,http://galaxy.genouest.org                           ,                                                                           ,        ,                ,       ,yes
