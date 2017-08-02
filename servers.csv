@@ -1,14 +1,14 @@
 name,url,version,registration_required,support
 ABiMS,http://galaxy3.sb-roscoff.fr/,,,support.abims@sb-roscoff.fr
-Genomics Virtual Lab Melbourne,http://galaxy-mel.genome.edu.au/,,yes,help@genome.edu.au
-Genomics Virtual Lab Queensland,https://galaxy-qld.genome.edu.au/galaxy,,,help@genome.edu.au
+Genomics Virtual Lab Melbourne,http://galaxy-mel.genome.edu.au/galaxy/,,yes,help@genome.edu.au
+Genomics Virtual Lab Queensland,https://galaxy-qld.genome.edu.au/galaxy/,,,help@genome.edu.au
 Biomina,http://biominavm-galaxy.biomina.be/galaxy/,,,geert.vandeweyer@uantwerpen.be
 GigaGalaxy,http://galaxy.cbiit.cuhk.edu.hk/,,,support@cbiit.cuhk.edu.hk
 CBiB Galaxy,http://services.cbib.u-bordeaux2.fr/galaxy/,,,admin.cbib@u-bordeaux2.fr
 Erasmus MC,https://bioinf-galaxian.erasmusmc.nl/galaxy/,17.05,,a.stubbs@erasmusmc.nl
 Whale Shark,http://whaleshark.georgiaaquarium.org/,,,development@georgiaaquarium.org
 LiSIs,http://lisis.cs.ucy.ac.cy/,,yes,support@lisis.cs
-GalaxEast,http://www.galaxeast.fr/,,yes,galaxy@igbmc.fr
+GalaxEast,http://use.galaxeast.fr/,,yes,galaxy@igbmc.fr
 Pitagora-Galaxy,http://try.pitagora-galaxy.org/galaxy/,,,yamanaka@genome.rcast.u-tokyo.ac.jp
 Main,https://usegalaxy.org,17.05,,clements@galaxyproject.org
 
