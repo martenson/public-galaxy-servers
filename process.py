@@ -28,13 +28,29 @@ with open('servers.csv', 'rb') as csvfile:
         })
 
 INTERESTING_FEATURES = (
-    'allow_user_creation', 'allow_user_dataset_purge', 'brand',
-    'enable_communication_server', 'enable_openid', 'enable_quotas',
-    'enable_unique_workflow_defaults', 'ga_code',
-    'has_user_tool_filters', 'message_box_visible', 'require_login',
-    'server_startttime', 'terms_url', 'use_remote_user'
+    'allow_user_creation',
+    'allow_user_dataset_purge',
+    'brand',
+    'enable_communication_server',
+    'enable_openid',
+    'enable_quotas',
+    'enable_unique_workflow_defaults',
+    'ftp_upload_site',
+    'has_user_tool_filters',
+    'message_box_visible',
+    'message_box_content',
+    'mailing_lists',
+    'require_login',
+    'server_startttime',
+    'support_url',
+    'terms_url',
+    'wiki_url',
+    'use_remote_user',
+    'logo_src',
+    'logo_url',
+    'inactivity_box_content',
+    'citation_url'
 )
-
 
 def assess_features(data):
     return {
@@ -45,6 +61,9 @@ def assess_features(data):
 
 responses = []
 for row in data:
+    if 'url' not in row:
+        loging.info("missing url for entry")
+        continue;
     url = row['url'].rstrip('/')
 
     try:
