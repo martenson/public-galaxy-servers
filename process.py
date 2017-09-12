@@ -94,7 +94,7 @@ def req_json_safe(url):
 def no_api(url):
     # Ok, something went wrong, let's try the home page.
     (response, data) = req_url_safe(url)
-    if data is None:
+    if response is None:
         # and something went wrong again, so we will call it down permanently.
         logging.info("%s down, bad ssl", response)
         return {
