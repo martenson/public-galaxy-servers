@@ -6,8 +6,10 @@ import simplejson
 import json
 import requests
 import logging
+from influxdb import InfluxDBClient
 logging.basicConfig(level=logging.DEBUG)
 CONCURRENCY = 20
+influxdb_enabled = True
 
 
 def munge(value):
@@ -107,6 +109,7 @@ def no_api(url):
         # If, however, window.Galaxy is in the text of the returned page...
         return {
             'server': url,
+            'response_time': response.elapsed.total_seconds(),
             'responding': True,
             'galaxy': True,
         }
@@ -115,6 +118,7 @@ def no_api(url):
     logging.info("%s inaccessible ok=%s galaxy in body=%s", url, response.ok, 'window.Galaxy' in response.text)
     return {
         'server': url,
+        'response_time': response.elapsed.total_seconds(),
         'responding': True,
         'galaxy': False,
     }
@@ -135,7 +139,7 @@ def process_url(url):
     # Ok, api is responding, but main page must be as well.
     (response_index, data_index) = req_url_safe(url)
 
-    if response_index.ok and 'window.Galaxy' in response_index.text:
+    if response_index is not None and response_index.ok and 'window.Galaxy' in response_index.text:
         return {
             'server': url,
             'responding': True,
@@ -163,6 +167,7 @@ def process_data(data):
     server = dict(data)
     # Update it with results of processing
     server.update({'results': process_url(data['url'].rstrip('/'))})
+    server.update({'_reqtime': datetime.datetime.utcnow().isoformat()})
     return server
 
 
@@ -184,3 +189,48 @@ if __name__ == '__main__':
     today = datetime.datetime.now().strftime("%Y-%m-%d-%H")
     with open(today + '.json', 'w') as handle:
         json.dump(return_list, handle)
+
+
+    if influxdb_enabled:
+        client = InfluxDBClient('influxdb', 8086, database='test')
+
+        measurements = []
+        for server in return_list:
+            measurement = {
+                'measurement': 'server',
+                'tags': {
+                    'location': server['location'],
+                    'name': server['name'],
+                    'galaxy': server['results']['galaxy'],
+                    'responding': server['results']['responding'],
+                    'version': server['results'].get('version', None),
+                },
+                'time': server['_reqtime'],
+                'fields': {
+                    'value': 1,
+                    'code': server['results'].get('code', 0),
+                    'response_time': server['results'].get('response_time', float(40)),
+                    'gx_version': float(server['results'].get('version', 0)),
+                }
+            }
+
+            if 'features' in server['results']:
+                measurement['tags'].update({
+                    'allow_user_creation': server['results']['features'].get('allow_user_creation', False),
+                    'allow_user_dataset_purge': server['results']['features'].get('allow_user_dataset_purge', False),
+                    'enable_communication_server': server['results']['features'].get('enable_communication_server', False),
+                    'enable_openid': server['results']['features'].get('enable_openid', False),
+                    'enable_quotas': server['results']['features'].get('enable_quotas', False),
+                    'enable_unique_workflow_defaults': server['results']['features'].get('enable_unique_workflow_defaults', False),
+                    'has_user_tool_filters': server['results']['features'].get('has_user_tool_filters', False),
+                    'message_box_visible': server['results']['features'].get('message_box_visible', False),
+                    'require_login': server['results']['features'].get('require_login', False),
+                })
+
+            # If no galaxy is found AND no features are found (So we couldn't access the API)
+            if not server['results']['galaxy'] and 'features' not in server['results']:
+                measurement['fields']['value'] = 0
+            measurements.append(measurement)
+
+
+        client.write_points(measurements)
