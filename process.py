@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import multiprocessing.pool
 import csv
 import datetime
 import simplejson
@@ -6,6 +7,7 @@ import json
 import requests
 import logging
 logging.basicConfig(level=logging.DEBUG)
+CONCURRENCY = 20
 
 
 def munge(value):
@@ -18,15 +20,6 @@ def munge(value):
     else:
         return value
 
-
-data = []
-with open('servers.csv', 'r') as csvfile:
-    reader = csv.reader(csvfile)
-    cols = next(reader)
-    for row in reader:
-        data.append({
-            k: munge(v) for (k, v) in zip(cols, row)
-        })
 
 
 INTERESTING_FEATURES = (
@@ -128,6 +121,7 @@ def no_api(url):
 
 
 def process_url(url):
+    logging.info("Processing %s" % url)
     (response, data) = req_json_safe(url + '/api/configuration')
     if data is None:
         return no_api(url)
@@ -164,15 +158,29 @@ def process_url(url):
     }
 
 
-responses = []
-for row in data:
-    if 'url' not in row:
-        logging.info("missing url for entry")
-        continue
-    url = row['url'].rstrip('/')
-    responses.append(process_url(url))
+def process_data(data):
+    # Clone it
+    server = dict(data)
+    # Update it with results of processing
+    server.update({'results': process_url(data['url'].rstrip('/'))})
+    return server
 
 
-today = datetime.datetime.now().strftime("%Y-%m-%d-%H")
-with open(today + '.json', 'w') as handle:
-    json.dump(responses, handle)
+if __name__ == '__main__':
+    data = []
+    with open('servers.csv', 'r') as csvfile:
+        reader = csv.reader(csvfile)
+        cols = next(reader)
+        for row in reader:
+            data.append({
+                k: munge(v) for (k, v) in zip(cols, row)
+            })
+    data = [x for x in data if 'url' in x]
+
+    # a thread pool that implements the process pool API.
+    pool = multiprocessing.pool.ThreadPool(processes=CONCURRENCY)
+    return_list = pool.map(process_data, data, chunksize=1)
+    pool.close()
+    today = datetime.datetime.now().strftime("%Y-%m-%d-%H")
+    with open(today + '.json', 'w') as handle:
+        json.dump(return_list, handle)
