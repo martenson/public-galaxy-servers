@@ -5,7 +5,7 @@ import simplejson
 import json
 import requests
 import logging
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(level=logging.DEBUG)
 
 
 def munge(value):
@@ -18,14 +18,16 @@ def munge(value):
     else:
         return value
 
+
 data = []
-with open('servers.csv', 'rb') as csvfile:
+with open('servers.csv', 'r') as csvfile:
     reader = csv.reader(csvfile)
     cols = next(reader)
     for row in reader:
         data.append({
             k: munge(v) for (k, v) in zip(cols, row)
         })
+
 
 INTERESTING_FEATURES = (
     'allow_user_creation',
@@ -52,6 +54,7 @@ INTERESTING_FEATURES = (
     'citation_url'
 )
 
+
 def assess_features(data):
     return {
         k: v for (k, v) in data.items()
@@ -59,82 +62,116 @@ def assess_features(data):
     }
 
 
+def req_url_safe(url):
+    try:
+        r = requests.get(url, timeout=30)
+    except requests.exceptions.ConnectTimeout:
+        # If we cannot connect in time
+        logging.debug("%s down, connect timeout", url)
+        return None, 'connect'
+    except requests.exceptions.SSLError as sle:
+        # Or they have invalid SSL
+        logging.debug("%s down, bad ssl", url)
+        return None, 'ssl'
+    except Exception as exc:
+        # Or there is some OTHER exception
+        logging.debug("%s down", url)
+        return None, 'unk'
+    # Ok, hopefully here means we've received a good response
+    logging.debug("%s ok", url)
+    return r, None
+
+
+def req_json_safe(url):
+    (r, error) = req_url_safe(url)
+    if r is None:
+        return r, error
+
+    # Now we try decoding it as json.
+    try:
+        print(r)
+        data = r.json()
+    except simplejson.scanner.JSONDecodeError as jse:
+        logging.debug("%s json_error: %s", url, jse)
+        return None, 'json'
+
+    return r, data
+
+
+def no_api(url):
+    # Ok, something went wrong, let's try the home page.
+    (response, data) = req_url_safe(url)
+    if data is None:
+        # and something went wrong again, so we will call it down permanently.
+        logging.info("%s down, bad ssl", response)
+        return {
+            'server': url,
+            'responding': False,
+            'galaxy': False,
+        }
+
+    if response.ok and 'window.Galaxy' in response.text:
+        # If, however, window.Galaxy is in the text of the returned page...
+        return {
+            'server': url,
+            'responding': True,
+            'galaxy': True,
+        }
+    # Here we could not access the API and we also cannot access
+    # the homepage.
+    logging.info("%s inaccessible ok=%s galaxy in body=%s", url, response.ok, 'window.Galaxy' in response.text)
+    return {
+        'server': url,
+        'responding': True,
+        'galaxy': False,
+    }
+
+
+def process_url(url):
+    (response, data) = req_json_safe(url + '/api/configuration')
+    if data is None:
+        return no_api(url)
+
+    # then we have a good contact for /api/configuration
+    if 'version_major' not in data:
+        return no_api(url)
+
+    version = data['version_major']
+    features = assess_features(response.json())
+    # Ok, api is responding, but main page must be as well.
+    (response_index, data_index) = req_url_safe(url)
+
+    if response_index.ok and 'window.Galaxy' in response_index.text:
+        return {
+            'server': url,
+            'responding': True,
+            'galaxy': True,
+
+            'version': version,
+            # how responsive is their server
+            'response_time': response.elapsed.total_seconds(),
+            # What interesting features does this galaxy have.
+            'features': features,
+        }
+    return {
+        'server': url,
+        'responding': True,
+        'galaxy': False,
+        'version': version,
+        'response_time': response_index.elapsed.total_seconds(),
+        'code': response_index.status_code,
+        'features': features,
+    }
+
+
 responses = []
 for row in data:
     if 'url' not in row:
-        loging.info("missing url for entry")
-        continue;
+        logging.info("missing url for entry")
+        continue
     url = row['url'].rstrip('/')
+    responses.append(process_url(url))
 
-    try:
-        r = requests.get(url + '/api/configuration', timeout=30)
-        version = r.json()['version_major']
-        # But this doesn't completely mean it is up. The UI needs to be loading.
-        r_index = requests.get(url, timeout=30)
-        if r_index.ok and 'window.Galaxy' in r_index.text:
-            responses.append({
-                'server': url,
-                'version': version,
-                # how responsive is their server
-                'response_time': r.elapsed.total_seconds(),
-                # Error code, should be 200, but may be interesting things here as well?
-                'code': r.status_code,
-                # What interesting features does this galaxy have.
-                'features': assess_features(r.json()),
-                # Can we access the home page / window.Galaxy is in there.
-                'homepage': True,
-            })
-            logging.info("%s up", url)
-        else:
-            logging.info("%s up, but ok=%s galaxy in body=%s", url, r.ok, 'window.Galaxy' in r_index.text)
-            responses.append({
-                'server': url,
-                'version': version,
-                'response_time': r.elapsed.total_seconds(),
-                'code': r.status_code,
-                'features': assess_features(r.json()),
-                # Here we cannot access home page. E.g. remote_user
-                'homepage': False,
-            })
-    except requests.exceptions.ConnectTimeout:
-        responses.append({'server': url})
-    except simplejson.scanner.JSONDecodeError:
-        # ok, wasn't json. Was this an error?
-        try:
-            r_index = requests.get(url, timeout=30)
-        except requests.exceptions.SSLError:
-            logging.info("%s down, bad ssl", url)
-            responses.append({'server': url})
-            continue
-
-        if r_index.ok and 'window.Galaxy' in r_index.text:
-            responses.append({
-                'server': url,
-                'version': None,
-                'response_time': r.elapsed.total_seconds(),
-                'code': r.status_code,
-                'features': {},
-                'homepage': True,
-            })
-            logging.info("%s up", url)
-        else:
-            # Here we could not access the API and we also cannot access
-            # the homepage.
-            logging.info("%s inaccessible ok=%s galaxy in body=%s", url, r.ok, 'window.Galaxy' in r_index.text)
-            responses.append({
-                'server': url,
-                'version': None,
-                'response_time': r.elapsed.total_seconds(),
-                'code': r.status_code,
-                'features': {},
-                'homepage': False,
-            })
-    except requests.exceptions.SSLError:
-        logging.info("%s down, bad ssl", url)
-        responses.append({'server': url})
-    except Exception as exc:
-        responses.append({'server': url})
-        logging.info("%s down", url)
 
 today = datetime.datetime.now().strftime("%Y-%m-%d-%H")
 with open(today + '.json', 'w') as handle:
