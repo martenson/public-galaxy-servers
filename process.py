@@ -60,18 +60,18 @@ def req_url_safe(url):
         r = requests.get(url, timeout=30)
     except requests.exceptions.ConnectTimeout:
         # If we cannot connect in time
-        logging.debug("%s down, connect timeout", url)
+        logging.debug("[%s] %s down, connect timeout", multiprocessing.current_process(), url)
         return None, 'connect'
     except requests.exceptions.SSLError as sle:
         # Or they have invalid SSL
-        logging.debug("%s down, bad ssl", url)
+        logging.debug("[%s] %s down, bad ssl", multiprocessing.current_process(), url)
         return None, 'ssl'
     except Exception as exc:
         # Or there is some OTHER exception
-        logging.debug("%s down", url)
+        logging.debug("[%s] %s down", multiprocessing.current_process(), url)
         return None, 'unk'
     # Ok, hopefully here means we've received a good response
-    logging.debug("%s ok", url)
+    logging.debug("[%s] %s ok", multiprocessing.current_process(), url)
     return r, None
 
 
@@ -85,7 +85,7 @@ def req_json_safe(url):
         print(r)
         data = r.json()
     except simplejson.scanner.JSONDecodeError as jse:
-        logging.debug("%s json_error: %s", url, jse)
+        logging.debug("[%s] %s json_error: %s", multiprocessing.current_process(), url, jse)
         return None, 'json'
 
     return r, data
@@ -96,7 +96,7 @@ def no_api(url):
     (response, data) = req_url_safe(url)
     if data is None:
         # and something went wrong again, so we will call it down permanently.
-        logging.info("%s down, bad ssl", response)
+        logging.info("[%s] %s down, bad ssl", multiprocessing.current_process(), response)
         return {
             'server': url,
             'responding': False,
@@ -112,7 +112,7 @@ def no_api(url):
         }
     # Here we could not access the API and we also cannot access
     # the homepage.
-    logging.info("%s inaccessible ok=%s galaxy in body=%s", url, response.ok, 'window.Galaxy' in response.text)
+    logging.info("[%s] %s inaccessible ok=%s galaxy in body=%s", multiprocessing.current_process(), url, response.ok, 'window.Galaxy' in response.text)
     return {
         'server': url,
         'responding': True,
@@ -121,7 +121,7 @@ def no_api(url):
 
 
 def process_url(url):
-    logging.info("Processing %s" % url)
+    logging.info("[%s] Processing %s", multiprocessing.current_process(), url)
     (response, data) = req_json_safe(url + '/api/configuration')
     if data is None:
         return no_api(url)
