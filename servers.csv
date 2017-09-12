@@ -53,8 +53,7 @@ In Silico Galaxy,http://insilico.utulsa.edu/galaxy/,,,tools
 Institut Curie Galaxy,https://galaxy-public.curie.fr/,galaxy.contact@curie.fr,FR,
 Koslicki Lab Galaxy,http://math-galaxy.cgrb.oregonstate.edu:8080/,,US,tools
 LAPPS Grid,http://galaxy.lappsgrid.org/,,,nlp
-LiSIs,http://lisis.cs.ucy.ac.cy/,lisis-support@googlegroups.com,,tools
-LiSIs,http://lisis.cs.ucy.ac.cy/,support@lisis.cs,,
+LiSIs,http://lisis.cs.ucy.ac.cy/,lisis-support@googlegroups.com;support@lisis.cs,,tools
 MBAC Metabiome Portal,http://mbac.gmu.edu:8080/,pgilleve@gmu.edu,,tools
 MDC Galaxy,https://galaxy.mdc-berlin.net/,,,
 MGEScan on Galaxy Workflow System,http://149.165.158.125:38080/,,US,tools
