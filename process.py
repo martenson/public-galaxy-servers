@@ -147,7 +147,7 @@ def process_url(url):
 
             'version': version,
             # how responsive is their server
-            'response_time': response.elapsed.total_seconds(),
+            'response_time': response_index.elapsed.total_seconds(),
             # What interesting features does this galaxy have.
             'features': features,
         }
