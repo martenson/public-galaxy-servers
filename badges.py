@@ -61,9 +61,9 @@ for server in results:
     uptime = 100 * float(sum(results[server])) / found_files
     # Safe filename for storing the image as.
     filename = re.sub('\s', '_', server)
-    filename = re.sub('[^A-Za-z0-9_]', '_', filename) + '.png'
+    filename = re.sub('[^A-Za-z0-9_]', '_', filename) + '.svg'
     # Copy the appropriate image / download if not existing.
-    src_img = os.path.join(STATIC_DIR, '%0.2f.png' % uptime)
+    src_img = os.path.join(STATIC_DIR, '%0.2f.svg' % uptime)
     dst_img = os.path.join(OUTPUT_DIR, filename)
     if not os.path.exists(src_img):
         # Download the missing image
