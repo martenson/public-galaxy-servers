@@ -1,11 +1,12 @@
 #!/usr/bin/env python
-import sys
+import cgi
 import datetime
 import json
 import os
 import re
 import shutil
 import subprocess
+import sys
 import time
 
 
@@ -26,6 +27,7 @@ buckets = (
     (85, 'orange'),
     (0, 'red'),
 )
+
 
 def get_color(uptime):
     for (target, color) in buckets:
@@ -56,7 +58,13 @@ for t in range(-24 * 30, 0):
             server['results']['galaxy'] or 'features' in server['results']
         )
 
-for server in results:
+html_data = """
+<html><head></head>
+<body>
+<table>
+"""
+
+for server in sorted(results):
     # Calculate uptime
     uptime = 100 * float(sum(results[server])) / found_files
     # Safe filename for storing the image as.
@@ -77,3 +85,11 @@ for server in results:
 
     # Ok, we've got their image, copy it over to somewhere named based on their server.
     shutil.copy(src_img, dst_img)
+    html_data += "<tr><td>" + cgi.escape(server) + "</td><td><img src='" + filename + "' /></td></tr>"
+
+html_data += """
+</table></body></html>
+"""
+
+with open(os.path.join(OUTPUT_DIR, 'index.html'), 'w') as handle:
+    handle.write(html_data)
