@@ -35,6 +35,7 @@ def get_color(uptime):
             return color
     return 'red'
 
+
 results = {}
 found_files = 0
 
@@ -61,6 +62,14 @@ for t in range(-24 * 30, 0):
 html_data = """
 <html><head></head>
 <body>
+<h1>Galaxy Uptime</h1>
+<p>
+These badges are the results of regularly checking in with your Galaxy
+instance. The numbers may not be accurate (this month, 2017-10) due to changes
+in the script as we identified cases where we incorrectly identified your
+server as offline. Note that even then, the uptime number is reflective only of
+our hourly check-ins with your server.
+</p>
 <table>
 """
 
