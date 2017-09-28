@@ -66,7 +66,7 @@ def req_url_safe(url):
         return None, 'connect'
     except requests.exceptions.SSLError as sle:
         # Or they have invalid SSL
-        logging.debug("%s down, bad ssl", url)
+        logging.debug("%s down, bad ssl: %s", url, sle)
         return None, 'ssl'
     except Exception as exc:
         # Or there is some OTHER exception
