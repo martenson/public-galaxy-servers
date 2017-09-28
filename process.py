@@ -108,7 +108,7 @@ def no_api(url):
     if response.ok:
         if 'window.Galaxy' in response.text \
                 or 'galaxyIcon_noText.png' in response.text \
-                or 'iframe#galaxy_main' in response.txt:
+                or 'iframe#galaxy_main' in response.text:
             # If, however, window.Galaxy is in the text of the returned page...
             return {
                 'server': url,
