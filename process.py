@@ -59,7 +59,7 @@ def assess_features(data):
 
 def req_url_safe(url):
     try:
-        r = requests.get(url, timeout=30)
+        r = requests.get(url, timeout=60, verify=False)
     except requests.exceptions.ConnectTimeout:
         # If we cannot connect in time
         logging.debug("%s down, connect timeout", url)
