@@ -105,14 +105,17 @@ def no_api(url):
             'galaxy': False,
         }
 
-    if response.ok and 'window.Galaxy' in response.text:
-        # If, however, window.Galaxy is in the text of the returned page...
-        return {
-            'server': url,
-            'response_time': response.elapsed.total_seconds(),
-            'responding': True,
-            'galaxy': True,
-        }
+    if response.ok:
+        if 'window.Galaxy' in response.text \
+                or 'galaxyIcon_noText.png' in response.text \
+                or 'iframe#galaxy_main' in response.txt:
+            # If, however, window.Galaxy is in the text of the returned page...
+            return {
+                'server': url,
+                'response_time': response.elapsed.total_seconds(),
+                'responding': True,
+                'galaxy': True,
+            }
     # Here we could not access the API and we also cannot access
     # the homepage.
     logging.info("%s inaccessible ok=%s galaxy in body=%s", url, response.ok, 'window.Galaxy' in response.text)
