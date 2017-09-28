@@ -6,12 +6,10 @@ APOSTL Galaxy,http://apostl.moffitt.org/,bornea27@gmail.com,US,tools
 ARGs-OAP Galaxy,http://smile.hku.hk/SARGs,zhangt@hku.hk,HK,tools
 Antigen Receptor Galaxy,https://bioinf-galaxian.erasmusmc.nl/argalaxy/,d.vanzessen@erasmusmc.nl,NL,tools
 BIPAA,https://bipaa-galaxy.genouest.org,bipaa@inra.fr,FR,
-BISTRO Galaxy,http://galaxy.bioinfo-bistro.fr/galaxy/,akress@unistra.fr,FR,tools
 BioCiphers Galaxy,http://avispa.biociphers.org/,avispa@biociphers.org,,tools
 BioMaS Galaxy,http://galaxy.cloud.ba.infn.it:8080/,bruno.fosso@gmail.com giacinto.donvito@ba.infn.it,IT,tools
 Biomina,http://biominavm-galaxy.biomina.be/galaxy/,geert.vandeweyer@uantwerpen.be,AU,genomics
 BitLAB Galaxy,http://pistacho.ac.uma.es/galaxy/,,ES,tools
-CAPER 2,http://111.198.139.90/caper2,wangdanburnett@163.com,CN,
 CART,http://cart.embl.de/,,DE,tools
 CBiB Galaxy,http://services.cbib.u-bordeaux2.fr/galaxy/,admin.cbib@u-bordeaux2.fr,FR,genomics
 CPT,https://cpt.tamu.edu/galaxy-pub/,cory.maughmer@tamu.edu,US,phage
@@ -25,7 +23,6 @@ Erasmus MC,https://bioinf-galaxian.erasmusmc.nl/galaxy/,a.stubbs@erasmusmc.nl,NL
 FROG,http://ab-openlab.csir.res.in/frog/,,IN,tools
 Freiburg Galaxy,http://galaxy.uni-freiburg.de,galaxy@informatik.uni-freiburg.de,DE,
 GIO,http://gio.sbcs.qmul.ac.uk/,,UK,
-GO Galaxy,http://galaxy.berkeleybop.org/,,US,
 GVL Melbourne,http://galaxy-mel.genome.edu.au/galaxy/,help@genome.edu.au,AU,
 GVL Queensland,https://galaxy-qld.genome.edu.au/galaxy/,help@genome.edu.au,AU,
 GVL-QLD,https://galaxy-qld.genome.edu.au/galaxy,,AU,
