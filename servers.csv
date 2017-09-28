@@ -76,7 +76,7 @@ USMI Galaxy Demonstrator,http://bioinformatics.hsanmartino.it:8080,danielepierpa
 VarCap Galaxy,http://galaxy.csb.univie.ac.at:8080,,AT,tools
 Vinther Lab,http://galaxy.bio.ku.dk/,,DK,tools
 VirAmp Galaxy,http://viramp.com/,,,
-Wageningen UR Galaxy,http://galaxy.wur.nl/,galaxy@wur.nl eric.kuijt@wur.nl alex.bossers@wur.nl pieter.lukasse@wur.nl,NL,tools
+Wageningen UR Galaxy,https://galaxy.wur.nl/galaxy_production/,galaxy@wur.nl eric.kuijt@wur.nl alex.bossers@wur.nl pieter.lukasse@wur.nl,NL,tools
 Whale Shark,http://whaleshark.georgiaaquarium.org/,development@georgiaaquarium.org,US,
 ZBIT Bioinformatics Toolbox,http://webservices.cs.uni-tuebingen.de,galaxy@listserv.uni-tuebingen.de,DE,tools
 ballaxy,https://ballaxy.bioinf.uni-sb.de,ball-user-list@googlegroups.com,DE,
