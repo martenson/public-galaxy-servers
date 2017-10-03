@@ -10,6 +10,8 @@ from influxdb import InfluxDBClient
 logging.basicConfig(level=logging.DEBUG)
 CONCURRENCY = 20
 influxdb_enabled = True
+USER_AGENT = 'Galaxy Public Server Monitoring Bot (+https://github.com/martenson/public-galaxy-servers)'
+HEADERS = {'User-Agent': USER_AGENT}
 
 
 def munge(value):
@@ -21,7 +23,6 @@ def munge(value):
         return None
     else:
         return value
-
 
 
 INTERESTING_FEATURES = (
@@ -59,7 +60,7 @@ def assess_features(data):
 
 def req_url_safe(url):
     try:
-        r = requests.get(url, timeout=60, verify=False)
+        r = requests.get(url, timeout=60, verify=False, headers=HEADERS)
     except requests.exceptions.ConnectTimeout:
         # If we cannot connect in time
         logging.debug("%s down, connect timeout", url)
@@ -193,7 +194,6 @@ if __name__ == '__main__':
     with open(today + '.json', 'w') as handle:
         json.dump(return_list, handle)
 
-
     if influxdb_enabled:
         client = InfluxDBClient('influxdb', 8086, database='test')
 
@@ -234,6 +234,5 @@ if __name__ == '__main__':
             if not server['results']['galaxy'] and 'features' not in server['results']:
                 measurement['fields']['value'] = 0
             measurements.append(measurement)
-
 
         client.write_points(measurements)
