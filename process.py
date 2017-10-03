@@ -60,14 +60,14 @@ def assess_features(data):
 
 def req_url_safe(url):
     try:
-        r = requests.get(url, timeout=30, headers=HEADERS)
+        r = requests.get(url, timeout=60, verify=False, headers=HEADERS)
     except requests.exceptions.ConnectTimeout:
         # If we cannot connect in time
         logging.debug("%s down, connect timeout", url)
         return None, 'connect'
     except requests.exceptions.SSLError as sle:
         # Or they have invalid SSL
-        logging.debug("%s down, bad ssl", url)
+        logging.debug("%s down, bad ssl: %s", url, sle)
         return None, 'ssl'
     except Exception as exc:
         # Or there is some OTHER exception
@@ -106,14 +106,17 @@ def no_api(url):
             'galaxy': False,
         }
 
-    if response.ok and 'window.Galaxy' in response.text:
-        # If, however, window.Galaxy is in the text of the returned page...
-        return {
-            'server': url,
-            'response_time': response.elapsed.total_seconds(),
-            'responding': True,
-            'galaxy': True,
-        }
+    if response.ok:
+        if 'window.Galaxy' in response.text \
+                or 'galaxyIcon_noText.png' in response.text \
+                or 'iframe#galaxy_main' in response.text:
+            # If, however, window.Galaxy is in the text of the returned page...
+            return {
+                'server': url,
+                'response_time': response.elapsed.total_seconds(),
+                'responding': True,
+                'galaxy': True,
+            }
     # Here we could not access the API and we also cannot access
     # the homepage.
     logging.info("%s inaccessible ok=%s galaxy in body=%s", url, response.ok, 'window.Galaxy' in response.text)
