@@ -38,6 +38,7 @@ Genomic Hyperbrowser,http://hyperbrowser.uio.no/hb/,hyperbrowser-requests@usit.u
 GrAPPA,https://grappa.eecs.utk.edu/grappa/,grappa@utk.edu,US,
 Halogen Bonding Galaxy,http://134.2.17.68:8081/,,DE,tools
 Huttenhower Lab,http://huttenhower.sph.harvard.edu/galaxy/,chuttenh@hsph.harvard.edu,US,tools
+IAPT,http://cloudimaging.net.au/,admin@cloudimaging.net.au,AU,
 IBERS @ Aberystwyth Galaxy,http://share-galaxy.ibers.aber.ac.uk/,ibers-cs@aber.ac.uk,UK,tools
 IRRI Galaxy,http://galaxy.irri.org/,,PH,
 ImmPort Galaxy,http://immportgalaxy.org/,immport-galaxy@immport.org,US,
@@ -60,17 +61,23 @@ NELLY,http://www.bioinformatica.ucr.ac.cr:8080/,,CR,
 Nebula,http://nebula.curie.fr/,galaxy.contact@curie.fr,FR,
 OSDDlinux LiveGalaxy,http://osddlinux.osdd.net:8001/,osddlinux@gmail.com,US,drug
 Oqtans,https://galaxy.inf.ethz.ch/,galaxy@raetschlab.org,CH,
+Orione,http://orione.crs4.it/,galaxyadmin@crs4.it,IT,
+Osiris Galaxy,http://galaxy-dev.cnsi.ucsb.edu/osiris/,,US,tools
+PGTB Galaxy,https://galaxy-pgtp.pierroton.inra.fr,,FR, 
+PIA Galaxy,http://galaxy-dev.cnsi.ucsb.edu/pia/,,US,tools
 PhenoMeNal,http://public.phenomenal-h2020.eu/,,EU,
 Pitagora-Galaxy,http://try.pitagora-galaxy.org/galaxy/,yamanaka@genome.rcast.u-tokyo.ac.jp,JP,
 PlantGenIE,http://galaxy.plantgenie.org:8080/,,SE,
 PreSTIGE,http://prestige.case.edu/,olivia.corradin@case.edu,US,tools
 PredPharmTox,http://galaxy.predpharmtox.org/,,SE,tools
 QBRC Galaxy,http://www.galaxy.qbrc.org/,,US,tools
+RDF2Graph,http://semantics.systemsbiology.nl/RDF2Graph/,,NL,tools
 RNA-Rocket,http://rnaseq.pathogenportal.org/,,US,
 RNA-Seq Portal,http://weizhongli-lab.org:8088,,US,rna-seq
 RepeatExplorer 1,http://repeatexplorer.umbr.cas.cz/,admin@repeatexplorer.org,CZ,
 RiboGalaxy,http://ribogalaxy.ucc.ie/,,IE,
 SCDE,http://discovery.hsci.harvard.edu/galaxy/,,US,
+SIFTED Galaxy,http://ec2-54-88-183-115.compute-1.amazonaws.com/,,US,tools
 South Green Galaxy,http://galaxy.southgreen.fr/galaxy/,,FR,
 USMI Galaxy Demonstrator,http://bioinformatics.hsanmartino.it:8080,danielepierpaolo.colobraro@hsanmartino.it paolo.romano@hsanmartino.it,IT,tools
 VarCap Galaxy,http://galaxy.csb.univie.ac.at:8080,,AT,tools
