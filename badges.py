@@ -55,6 +55,9 @@ for t in range(-24 * 30, 0):
         if server['name'] not in results:
             results[server['name']] = []
 
+        if 'results' not in server:
+            continue
+
         results[server['name']].append(
             server['results']['galaxy'] or 'features' in server['results']
         )
