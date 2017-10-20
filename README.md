@@ -14,6 +14,11 @@ This list was initially seeded from a couple of sources:
 - [x] https://beta.launch.usegalaxy.org/cloudlaunch/api/v1/public_services/
 - [x] https://github.com/bgruening/galaxy-maps/blob/master/server.geojson
 
+## License
+
+Scripts are under MIT. Datafile(s) are under [![Licensed under CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
+
 ## Help us!
 
 This list is never complete. Please feel free to [add your own server](https://github.com/martenson/public-galaxy-servers/edit/master/servers.csv) if your instance meets the requirements.
+
