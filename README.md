@@ -17,3 +17,7 @@ This list was initially seeded from a couple of sources:
 ## Help us!
 
 This list is never complete. Please feel free to [add your own server](https://github.com/martenson/public-galaxy-servers/edit/master/servers.csv) if your instance meets the requirements.
+
+## License
+
+The scripts are available under GPLv3. The `servers.csv` file is made available under the Open Database License, [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1.0/).
