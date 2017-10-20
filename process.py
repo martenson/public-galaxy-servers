@@ -237,7 +237,7 @@ if __name__ == '__main__':
                 'fields': {
                     'value': 1,
                     'code': server['results'].get('code', 0),
-                    'response_time': server['results']['repsonse_time'],
+                    'response_time': server['results']['response_time'],
                     'gx_version': float(server['results'].get('version', 0)),
                 }
             }
