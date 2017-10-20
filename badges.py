@@ -48,7 +48,10 @@ for t in range(-24 * 30, 0):
         continue
 
     with open(path, 'r') as handle:
-        data = json.load(handle)
+        try:
+            data = json.load(handle)
+        except ValueError:
+            print("Could not load %s" % path)
     found_files += 1
 
     for server in data:
