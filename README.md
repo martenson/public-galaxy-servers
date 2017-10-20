@@ -36,13 +36,13 @@ $ python badges.py log_directory output-badges
 
 `servers.csv` is stored as a CSV file with a single header line. The columns are:
 
-Column | Example | Meaning
----    | --- | ---
-`name` | Main | The name of the server. Often corresponds with the "Galaxy Brand"
-`url` | https://usegalaxy.org | The URL at which this Galaxy can be accessed. This must be accessible directly, without any redirects or login pages. Otherwise, the Galaxy will be considered as "down" and possibly removed from the list.
-`support` | `support@example.com` | A contact address for obtaining support relating to this instance.
-`location` | `US` | [2-letter country code](https://en.wikipedia.org/wiki/ISO_3166-2) where the server/organisation reside.
-`tags` | `tools` | The general purpose of this galaxy. E.g. `tools` for general purpose servers, or `nlp` for instances focused on natural language processing.
+Column     | Example               | Meaning
+---------- | --------------------- | ---------------------
+`name`     | Main                  | The name of the server. Often corresponds with the "Galaxy Brand"
+`url`      | https://usegalaxy.org | The URL at which this Galaxy can be accessed. This must be accessible directly, without any redirects or login pages. Otherwise, the Galaxy will be considered as "down" and possibly removed from the list.
+`support`  | `support@example.com` | A contact address for obtaining support relating to this instance.
+`location` | `US`                  | [2-letter country code](https://en.wikipedia.org/wiki/ISO_3166-2) where the server/organisation reside.
+`tags`     | `tools`               | The general purpose of this galaxy. E.g. `tools` for general purpose servers, or `nlp` for instances focused on natural language processing.
 
 ## Help us!
 
