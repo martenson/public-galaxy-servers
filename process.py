@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 import argparse
-import multiprocessing.pool
 import csv
 import datetime
-import simplejson
 import json
-import requests
 import logging
-from influxdb import InfluxDBClient
+import multiprocessing.pool
+import os
+import requests
+import simplejson
 logging.basicConfig(level=logging.DEBUG)
 CONCURRENCY = 20
 influxdb_enabled = True
@@ -183,14 +183,13 @@ def process_data(data):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fetch information about a list of Galaxy servers')
     parser.add_argument('servers', help='servers.csv file. First row ignored, columns: name,url,support,location,tags', default='servers.csv')
-    parser.add_argument('--json_dir', help="Output directory for .json files")
+    parser.add_argument('--json_dir', help="Output directory for .json files", default='output')
     parser.add_argument('--influx', action='store_true', help='Enable influxdb output')
     parser.add_argument('--influx_db', default='test')
     parser.add_argument('--influx_host', default='influxdb')
     parser.add_argument('--influx_port', default=8086)
 
     args = parser.parse_args()
-
 
     data = []
     with open(args.servers, 'r') as csvfile:
@@ -207,10 +206,13 @@ if __name__ == '__main__':
     return_list = pool.map(process_data, data, chunksize=1)
     pool.close()
     today = datetime.datetime.now().strftime("%Y-%m-%d-%H")
-    with open(os.path.join(output_dir, today + '.json'), 'w') as handle:
+    if not os.path.exists(args.json_dir):
+        os.makedirs(args.json_dir)
+    with open(os.path.join(args.json_dir, today + '.json'), 'w') as handle:
         json.dump(return_list, handle)
 
     if args.influx:
+        from influxdb import InfluxDBClient
         client = InfluxDBClient(args.influx_host, args.influx_port, database=args.influx_db)
 
         measurements = []
