@@ -20,4 +20,4 @@ This list is never complete. Please feel free to [add your own server](https://g
 
 ## License
 
-The scripts are available under GPLv3. The `servers.csv` file is made available under the Open Database License, [ODbL 1.0](https://opendatacommons.org/licenses/odbl/1.0/).
+The scripts are available under the MIT license. The `servers.csv` file is released to the public domain, under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
