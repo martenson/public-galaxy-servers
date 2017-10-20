@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import argparse
 import multiprocessing.pool
 import csv
 import datetime
@@ -155,29 +156,44 @@ def process_url(url):
             # What interesting features does this galaxy have.
             'features': features,
         }
-    return {
-        'server': url,
-        'responding': True,
-        'galaxy': False,
-        'version': version,
-        'response_time': response_index.elapsed.total_seconds(),
-        'code': response_index.status_code,
-        'features': features,
-    }
+
+    if response_index:
+        return {
+            'server': url,
+            'responding': True,
+            'galaxy': False,
+            'version': version,
+            'response_time': response_index.elapsed.total_seconds(),
+            'code': response_index.status_code,
+            'features': features,
+        }
 
 
 def process_data(data):
     # Clone it
     server = dict(data)
     # Update it with results of processing
-    server.update({'results': process_url(data['url'].rstrip('/'))})
+    results = process_url(data['url'].rstrip('/'))
+    if results:
+        server.update({'results': results})
     server.update({'_reqtime': datetime.datetime.utcnow().isoformat()})
     return server
 
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Fetch information about a list of Galaxy servers')
+    parser.add_argument('servers', help='servers.csv file. First row ignored, columns: name,url,support,location,tags', default='servers.csv')
+    parser.add_argument('--json_dir', help="Output directory for .json files")
+    parser.add_argument('--influx', action='store_true', help='Enable influxdb output')
+    parser.add_argument('--influx_db', default='test')
+    parser.add_argument('--influx_host', default='influxdb')
+    parser.add_argument('--influx_port', default=8086)
+
+    args = parser.parse_args()
+
+
     data = []
-    with open('servers.csv', 'r') as csvfile:
+    with open(args.servers, 'r') as csvfile:
         reader = csv.reader(csvfile)
         cols = next(reader)
         for row in reader:
@@ -191,14 +207,21 @@ if __name__ == '__main__':
     return_list = pool.map(process_data, data, chunksize=1)
     pool.close()
     today = datetime.datetime.now().strftime("%Y-%m-%d-%H")
-    with open(today + '.json', 'w') as handle:
+    with open(os.path.join(output_dir, today + '.json'), 'w') as handle:
         json.dump(return_list, handle)
 
-    if influxdb_enabled:
-        client = InfluxDBClient('influxdb', 8086, database='test')
+    if args.influx:
+        client = InfluxDBClient(args.influx_host, args.influx_port, database=args.influx_db)
 
         measurements = []
         for server in return_list:
+            # Only send the data point if we have results to send.
+            if 'results' not in server:
+                continue
+
+            if 'response_time' not in server['results']:
+                continue
+
             measurement = {
                 'measurement': 'server',
                 'tags': {
@@ -212,7 +235,7 @@ if __name__ == '__main__':
                 'fields': {
                     'value': 1,
                     'code': server['results'].get('code', 0),
-                    'response_time': server['results'].get('response_time', float(40)),
+                    'response_time': server['results']['repsonse_time'],
                     'gx_version': float(server['results'].get('version', 0)),
                 }
             }
