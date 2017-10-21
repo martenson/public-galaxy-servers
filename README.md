@@ -14,6 +14,36 @@ This list was initially seeded from a couple of sources:
 - [x] https://beta.launch.usegalaxy.org/cloudlaunch/api/v1/public_services/
 - [x] https://github.com/bgruening/galaxy-maps/blob/master/server.geojson
 
+## Running the Parser
+
+The Freiburg Galaxy team runs the main copy of this code, and we make our results [publicly available](https://grafana.denbi.uni-freiburg.de/dashboard/db/public-galaxy-servers). If you wish to run a copy of this code, please be considerate of the servers you are probing. We make our requests at most once per hour.
+
+The `process.py` script contacts every server listed in the file passed to it and collects the results as a `.json` file an output directory.
+
+```bash
+$ python process.py servers.csv --json_dir log_directory
+```
+
+If you are running an [InfluxDB server](https://github.com/influxdata/influxdb), there are a couple of flags to help send data there.
+
+For creating the badges, we provide a second script, `badges.py` which processes the directory of `.json` files from the first step and produces a set of `.svg` files using the API of [shields.io](https://shields.io/)
+
+```bash
+$ python badges.py log_directory output-badges
+```
+
+## Data Format
+
+`servers.csv` is stored as a CSV file with a single header line. The columns are:
+
+Column     | Example               | Meaning
+---------- | --------------------- | ---------------------
+`name`     | Main                  | The name of the server. Often corresponds with the "Galaxy Brand"
+`url`      | https://usegalaxy.org | The URL at which this Galaxy can be accessed. This must be accessible directly, without any redirects or login pages. Otherwise, the Galaxy will be considered as "down" and possibly removed from the list.
+`support`  | `support@example.com` | A contact address for obtaining support relating to this instance.
+`location` | `US`                  | [2-letter country code](https://en.wikipedia.org/wiki/ISO_3166-2) where the server/organisation reside.
+`tags`     | `tools`               | The general purpose of this galaxy. E.g. `tools` for general purpose servers, or `nlp` for instances focused on natural language processing.
+
 ## Help us!
 
 This list is never complete. Please feel free to [add your own server](https://github.com/martenson/public-galaxy-servers/edit/master/servers.csv) if your instance meets the requirements.
