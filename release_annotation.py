@@ -1,7 +1,6 @@
 #!/usr/bin/env python
-import re
 import argparse
-import time
+import re
 import requests
 
 
@@ -23,7 +22,7 @@ if __name__ == '__main__':
 
     version = None
     if 'release notes' in data['title']:
-        versions = re.findall('^\[([0-9.]{4,})\]', "[17.09] release notes")
+        versions = re.findall('^\[([0-9.]{4,})\]', data['title'])
         if len(versions) == 1:
             version = versions[0]
 
