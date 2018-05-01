@@ -186,8 +186,11 @@ if __name__ == '__main__':
     parser.add_argument('--json_dir', help="Output directory for .json files", default='output')
     parser.add_argument('--influx', action='store_true', help='Enable influxdb output')
     parser.add_argument('--influx_db', default='test')
+    parser.add_argument('--influx_ssl', action='store_true')
     parser.add_argument('--influx_host', default='influxdb')
     parser.add_argument('--influx_port', default=8086)
+    parser.add_argument('--influx_user', default='root')
+    parser.add_argument('--influx_pass', default='root')
 
     args = parser.parse_args()
 
@@ -213,7 +216,13 @@ if __name__ == '__main__':
 
     if args.influx:
         from influxdb import InfluxDBClient
-        client = InfluxDBClient(args.influx_host, args.influx_port, database=args.influx_db)
+        influx_kw = {
+            'ssl': args.influx_ssl,
+            'database': args.influx_db,
+            'username': args.influx_user,
+            'password': args.influx_pass
+        }
+        client = InfluxDBClient(args.influx_host, args.influx_port, **influx_kw)
 
         measurements = []
         for server in return_list:
