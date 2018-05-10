@@ -10,7 +10,6 @@ import requests
 import simplejson
 logging.basicConfig(level=logging.DEBUG)
 CONCURRENCY = 20
-influxdb_enabled = True
 USER_AGENT = 'Galaxy Public Server Monitoring Bot (+https://github.com/martenson/public-galaxy-servers)'
 HEADERS = {'User-Agent': USER_AGENT}
 
@@ -184,13 +183,6 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Fetch information about a list of Galaxy servers')
     parser.add_argument('servers', help='servers.csv file. First row ignored, columns: name,url,support,location,tags', default='servers.csv')
     parser.add_argument('--json_dir', help="Output directory for .json files", default='output')
-    parser.add_argument('--influx', action='store_true', help='Enable influxdb output')
-    parser.add_argument('--influx_db', default='test')
-    parser.add_argument('--influx_ssl', action='store_true')
-    parser.add_argument('--influx_host', default='influxdb')
-    parser.add_argument('--influx_port', default=8086)
-    parser.add_argument('--influx_user', default='root')
-    parser.add_argument('--influx_pass', default='root')
 
     args = parser.parse_args()
 
@@ -209,64 +201,9 @@ if __name__ == '__main__':
     return_list = pool.map(process_data, data, chunksize=1)
     pool.close()
     today = datetime.datetime.now().strftime("%Y-%m-%d-%H")
+
     if not os.path.exists(args.json_dir):
         os.makedirs(args.json_dir)
+
     with open(os.path.join(args.json_dir, today + '.json'), 'w') as handle:
         json.dump(return_list, handle)
-
-    if args.influx:
-        from influxdb import InfluxDBClient
-        influx_kw = {
-            'ssl': args.influx_ssl,
-            'database': args.influx_db,
-            'username': args.influx_user,
-            'password': args.influx_pass
-        }
-        client = InfluxDBClient(args.influx_host, args.influx_port, **influx_kw)
-
-        measurements = []
-        for server in return_list:
-            # Only send the data point if we have results to send.
-            if 'results' not in server:
-                continue
-
-            if 'response_time' not in server['results']:
-                continue
-
-            measurement = {
-                'measurement': 'server',
-                'tags': {
-                    'location': server['location'],
-                    'name': server['name'],
-                    'galaxy': server['results']['galaxy'],
-                    'responding': server['results']['responding'],
-                    'version': server['results'].get('version', None),
-                },
-                'time': server['_reqtime'],
-                'fields': {
-                    'value': 1,
-                    'code': server['results'].get('code', 0),
-                    'response_time': server['results']['response_time'],
-                    'gx_version': float(server['results'].get('version', 0)),
-                }
-            }
-
-            if 'features' in server['results']:
-                measurement['tags'].update({
-                    'allow_user_creation': server['results']['features'].get('allow_user_creation', False),
-                    'allow_user_dataset_purge': server['results']['features'].get('allow_user_dataset_purge', False),
-                    'enable_communication_server': server['results']['features'].get('enable_communication_server', False),
-                    'enable_openid': server['results']['features'].get('enable_openid', False),
-                    'enable_quotas': server['results']['features'].get('enable_quotas', False),
-                    'enable_unique_workflow_defaults': server['results']['features'].get('enable_unique_workflow_defaults', False),
-                    'has_user_tool_filters': server['results']['features'].get('has_user_tool_filters', False),
-                    'message_box_visible': server['results']['features'].get('message_box_visible', False),
-                    'require_login': server['results']['features'].get('require_login', False),
-                })
-
-            # If no galaxy is found AND no features are found (So we couldn't access the API)
-            if not server['results']['galaxy'] and 'features' not in server['results']:
-                measurement['fields']['value'] = 0
-            measurements.append(measurement)
-
-        client.write_points(measurements)
