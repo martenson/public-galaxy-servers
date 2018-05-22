@@ -24,8 +24,7 @@ FROG,http://ab-openlab.csir.res.in/frog/,,IN,tools
 Galaxy Europe,https://usegalaxy.eu,contact@usegalaxy.eu,DE,
 GIO,http://gio.sbcs.qmul.ac.uk/,,UK,
 GVL Melbourne,http://galaxy-mel.genome.edu.au/galaxy/,help@genome.edu.au,AU,
-GVL Queensland,https://galaxy-qld.genome.edu.au/galaxy/,help@genome.edu.au,AU,
-GVL-QLD,https://galaxy-qld.genome.edu.au/galaxy,,AU,
+GVL Queensland,https://galaxy-qld.genome.edu.au/,help@genome.edu.au,AU,
 GVL-Tutorial,http://galaxy-tut.genome.edu.au/galaxy/,help@uq.edu.au,AU,tutorial
 GalaxEast,http://use.galaxeast.fr/,galaxy@igbmc.fr,FR,
 Galaxy Palfinder,https://palfinder.ls.manchester.ac.uk,peter.briggs@manchester.ac.uk,UK,tools
