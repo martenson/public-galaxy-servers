@@ -1,10 +1,14 @@
+import argparse
+import datetime
 import json
+import os
 from influxdb import InfluxDBClient
 
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Send results to an InfluxDB server')
-    parser.add_argument('--json', type=argparse.FileType('w'), help="Input .json file")
+    parser.add_argument('--json', type=argparse.FileType('r'), help="Input .json file")
+    parser.add_argument('--json_dir', help="Directory of JSON files (will autodetect current time)")
     parser.add_argument('--influx_db', default='test')
     parser.add_argument('--influx_ssl', action='store_true')
     parser.add_argument('--influx_host', default='influxdb')
@@ -14,7 +18,14 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    return_list = json.load(args.json)
+    if args.json:
+        return_list = json.load(args.json)
+    elif args.json_dir:
+        today = datetime.datetime.now().strftime("%Y-%m-%d-%H")
+        with open(os.path.join(args.json_dir, today + '.json'), 'r') as handle:
+            return_list = json.load(handle)
+    else:
+        raise Exception("Must provide --json or --json_dir")
 
     influx_kw = {
         'ssl': args.influx_ssl,
