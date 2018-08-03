@@ -48,6 +48,15 @@ Column     | Example               | Meaning
 
 This list is never complete. Please feel free to [add your own server](https://github.com/martenson/public-galaxy-servers/edit/master/servers.csv) if your instance meets the requirements.
 
+## Scripts
+
+We've included a tool-counting script, `tool-count.py`. Usage:
+
+```
+$ curl https://usegalaxy.org/api/tools | python tool-count.py usegalaxy.org
+galaxy.tools,server=usegalaxy.org count=935,uniq=922
+```
+
 ## License
 
 The scripts are available under the MIT license. The `servers.csv` file is released to the public domain, under [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/).
