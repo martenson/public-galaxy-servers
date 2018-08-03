@@ -2,7 +2,11 @@ import json
 import sys
 
 
-data = json.load(sys.stdin)
+try:
+    data = json.load(sys.stdin)
+except ValueError:
+    print('galaxy.tools,server="%s" count=%s,uniq=%s' % (sys.argv[1], 0, 0))
+    sys.exit(0)
 
 seen_before = {}
 
@@ -31,5 +35,5 @@ data = list(process_elems(data))
 tools = list(data)
 uniq_tools = set(tools)
 
-print('galaxy.tools,server=%s count=%s,uniq=%s' %
+print('galaxy.tools,server="%s" count=%s,uniq=%s' %
       (sys.argv[1], len(tools), len(uniq_tools)))
