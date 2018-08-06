@@ -36,4 +36,4 @@ tools = list(data)
 uniq_tools = set(tools)
 
 print('galaxy.tools,server="%s" count=%s,uniq=%s' %
-      (sys.argv[1], len(tools), len(uniq_tools)))
+      (sys.argv[1].replace(' ', '\\ '), len(tools), len(uniq_tools)))
