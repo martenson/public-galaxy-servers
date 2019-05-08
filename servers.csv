@@ -1,91 +1,91 @@
-name,url,support,location,tags
-ABiMS Tools,http://webtools.sb-roscoff.fr,support.abims@sb-roscoff.fr,FR,tools
-ABiMS,http://galaxy3.sb-roscoff.fr/,support.abims@sb-roscoff.fr,FR,genomics
-AGEseq Galaxy @ AspenDB,http://aspendb.uga.edu:8085/,,US,tools
-APOSTL Galaxy,http://apostl.moffitt.org/,bornea27@gmail.com,US,tools
-ARGs-OAP Galaxy,http://smile.hku.hk/SARGs,zhangt@hku.hk,HK,tools
-Antigen Receptor Galaxy,https://bioinf-galaxian.erasmusmc.nl/argalaxy/,d.vanzessen@erasmusmc.nl,NL,tools
-BIPAA,https://bipaa-galaxy.genouest.org,bipaa@inra.fr,FR,
-BioCiphers Galaxy,http://avispa.biociphers.org/,avispa@biociphers.org,,tools
-BioMaS Galaxy,http://galaxy.cloud.ba.infn.it:8080/,bruno.fosso@gmail.com giacinto.donvito@ba.infn.it,IT,tools
-Biomina,http://biominavm-galaxy.biomina.be/galaxy/,geert.vandeweyer@uantwerpen.be,AU,genomics
-BitLAB Galaxy,http://pistacho.ac.uma.es/galaxy/,,ES,tools
-CART,http://cart.embl.de/,,DE,tools
-CBiB Galaxy,http://services.cbib.u-bordeaux2.fr/galaxy/,admin.cbib@u-bordeaux2.fr,FR,genomics
-CPT,https://cpt.tamu.edu/galaxy-pub/,cory.maughmer@tamu.edu,US,phage
-ChimeRScope Galaxy,https://galaxy.unmc.edu/,,US,tools
-Cistrome,http://cistrome.org/ap/root,cistrome@googlegroups.com,US,chip-seq
-CoSSci,http://socscicompute.ss.uci.edu/,,US,social-science
-DBCLS Galaxy,http://galaxy.dbcls.jp/,atsuko@dbcls.jp,JP,
-Dintor,http://dintor.eurac.edu/,,IT,
-EpiToolKit Galaxy,http://www.epitoolkit.de/,,DE,tools
-Erasmus MC,https://bioinf-galaxian.erasmusmc.nl/galaxy/,a.stubbs@erasmusmc.nl,NL,
-FROG,http://ab-openlab.csir.res.in/frog/,,IN,tools
-Galaxy Europe,https://usegalaxy.eu,contact@usegalaxy.eu,DE,
-GIO,http://gio.sbcs.qmul.ac.uk/,,UK,
-GVL Melbourne,http://galaxy-mel.genome.edu.au/galaxy/,help@genome.edu.au,AU,
-GVL Queensland,https://galaxy-qld.genome.edu.au/,help@genome.edu.au,AU,
-GVL-Tutorial,http://galaxy-tut.genome.edu.au/galaxy/,help@uq.edu.au,AU,tutorial
-GalaxEast,http://use.galaxeast.fr/,galaxy@igbmc.fr,FR,
-Galaxy Palfinder,https://palfinder.ls.manchester.ac.uk,peter.briggs@manchester.ac.uk,UK,tools
-Galaxy-CEFAP,http://cefap.icb.usp.br/galaxy,geninfo@icb.usp.br.,BR,
-Galaxy-P,https://usegalaxyp.org/,help@msi.umn.edu,US,proteomics
-Galaxy@GenOuest,https://galaxy.genouest.org,support@genouest.org,FR,
-Galaxy@PRABI,http://galaxy.prabi.fr/,galaxy-support@listes.univ-lyon1.fr,FR,
-Galaxy@Pasteur,https://galaxy.pasteur.fr/,galaxy@pasteur.fr,FR,
-Genomic Hyperbrowser,http://hyperbrowser.uio.no/hb/,hyperbrowser-requests@usit.uio.no,NO,
-GrAPPA,https://grappa.eecs.utk.edu/grappa/,grappa@utk.edu,US,
-Halogen Bonding Galaxy,http://134.2.17.68:8081/,,DE,tools
-Huttenhower Lab,http://huttenhower.sph.harvard.edu/galaxy/,chuttenh@hsph.harvard.edu,US,tools
-IAPT,http://cloudimaging.net.au/,admin@cloudimaging.net.au,AU,
-IBERS @ Aberystwyth Galaxy,http://share-galaxy.ibers.aber.ac.uk/,ibers-cs@aber.ac.uk,UK,tools
-IRRI Galaxy,http://galaxy.irri.org/,,PH,
-ImmPort Galaxy,http://immportgalaxy.org/,immport-galaxy@immport.org,US,
-In Silico Galaxy,http://insilico.utulsa.edu/galaxy/,,US,tools
-Institut Curie Galaxy,https://galaxy-public.curie.fr/,galaxy.contact@curie.fr,FR,
-Koslicki Lab Galaxy,http://math-galaxy.cgrb.oregonstate.edu:8080/,,US,tools
-LAPPS Grid,http://galaxy.lappsgrid.org/,,US,nlp
-LiSIs,http://lisis.cs.ucy.ac.cy/,lisis-support@googlegroups.com;support@lisis.cs,CY,tools
-MBAC Metabiome Portal,http://mbac.gmu.edu:8080/,pgilleve@gmu.edu,US,tools
-MGEScan on Galaxy Workflow System,http://149.165.158.125:38080/,,US,tools
-MISSISSIPPI,http://mississippi.fr/,christophe.antoniewski@upmc.fr,FR,
-MPDS,http://mpds.osdd.net/,mpds.gnsmmg@gmail.com,IN,chemoinformatics
-MPI-HLR Bioinformatics,https://bioinformatics.mpi-bn.mpg.de/,,DE,tools
-Main,https://usegalaxy.org,,US,genomics
-Majewski Lab ExomeAI,http://genomequebec.mcgill.ca/exomeai,Javad.Nadaf@gmail.com,CA,tools
-Martin Luther University Halle-Wittenberg,http://galaxy.informatik.uni-halle.de,grau@informatik.uni DASH halle.de,DE,tools
-MiModD NacreousMap,http://mapping-by-sequencing.vm.uni-freiburg.de:8080/,mimodd@googlegroups.com,DE,tools
-NBIC,http://galaxy.nbic.nl/,,NL,
-NELLY,http://www.bioinformatica.ucr.ac.cr:8080/,,CR,
-Nebula,http://nebula.curie.fr/,galaxy.contact@curie.fr,FR,
-OSDDlinux LiveGalaxy,http://osddlinux.osdd.net:8001/,osddlinux@gmail.com,US,drug
-Oqtans,https://galaxy.inf.ethz.ch/,galaxy@raetschlab.org,CH,
-Orione,http://orione.crs4.it/,galaxyadmin@crs4.it,IT,
-Osiris Galaxy,http://galaxy-dev.cnsi.ucsb.edu/osiris/,,US,tools
-PGTB Galaxy,https://galaxy-pgtp.pierroton.inra.fr,,FR, 
-PIA Galaxy,http://galaxy-dev.cnsi.ucsb.edu/pia/,,US,tools
-PhenoMeNal,http://public.phenomenal-h2020.eu/,,EU,
-Pitagora-Galaxy,http://try.pitagora-galaxy.org/galaxy/,yamanaka@genome.rcast.u-tokyo.ac.jp,JP,
-PlantGenIE,http://galaxy.plantgenie.org:8080/,,SE,
-PreSTIGE,http://prestige.case.edu/,olivia.corradin@case.edu,US,tools
-PredPharmTox,http://galaxy.predpharmtox.org/,,SE,tools
-QBRC Galaxy,http://www.galaxy.qbrc.org/,,US,tools
-RDF2Graph,http://semantics.systemsbiology.nl/RDF2Graph/,,NL,tools
-RNA-Rocket,http://rnaseq.pathogenportal.org/,,US,
-RNA-Seq Portal,http://weizhongli-lab.org:8088,,US,rna-seq
-RepeatExplorer 1,http://repeatexplorer.umbr.cas.cz/,admin@repeatexplorer.org,CZ,
-RiboGalaxy,http://ribogalaxy.ucc.ie/,,IE,
-SCDE,http://discovery.hsci.harvard.edu/galaxy/,,US,
-SIFTED Galaxy,http://ec2-54-88-183-115.compute-1.amazonaws.com/,,US,tools
-South Green Galaxy,http://galaxy.southgreen.fr/galaxy/,,FR,
-USMI Galaxy Demonstrator,http://bioinformatics.hsanmartino.it:8080,danielepierpaolo.colobraro@hsanmartino.it paolo.romano@hsanmartino.it,IT,tools
-VarCap Galaxy,http://galaxy.csb.univie.ac.at:8080,,AT,tools
-Vinther Lab,http://galaxy.bio.ku.dk/,,DK,tools
-VirAmp Galaxy,http://viramp.com/,,,
-Wageningen UR Galaxy,https://galaxy.wur.nl/galaxy_production/,galaxy@wur.nl eric.kuijt@wur.nl alex.bossers@wur.nl pieter.lukasse@wur.nl,NL,tools
-Whale Shark,http://whaleshark.georgiaaquarium.org/,development@georgiaaquarium.org,US,
-ZBIT Bioinformatics Toolbox,http://webservices.cs.uni-tuebingen.de,galaxy@listserv.uni-tuebingen.de,DE,tools
-ballaxy,https://ballaxy.bioinf.uni-sb.de,ball-user-list@googlegroups.com,DE,
-deepTools2,http://deeptools.ie-freiburg.mpg.de/,deeptools@googlegroups.com,DE,tools
-kmer-SVM,http://kmersvm.beerlab.org/,kmersvm.team@gmail.com,US,tools
-workflow4metabolomics,http://galaxy.workflow4metabolomics.org,support@workflow4metabolomics.org,FR,
+name,url,location
+ABiMS Tools,http://webtools.sb-roscoff.fr,FR
+ABiMS,http://galaxy3.sb-roscoff.fr/,FR
+AGEseq Galaxy @ AspenDB,http://aspendb.uga.edu:8085/,US
+APOSTL Galaxy,http://apostl.moffitt.org/,US
+ARGs-OAP Galaxy,http://smile.hku.hk/SARGs,HK
+Antigen Receptor Galaxy,https://bioinf-galaxian.erasmusmc.nl/argalaxy/,NL
+BIPAA,https://bipaa-galaxy.genouest.org,FR
+BioCiphers Galaxy,http://avispa.biociphers.org/,
+BioMaS Galaxy,http://galaxy.cloud.ba.infn.it:8080/,IT
+Biomina,http://biominavm-galaxy.biomina.be/galaxy/,AU
+BitLAB Galaxy,http://pistacho.ac.uma.es/galaxy/,ES
+CART,http://cart.embl.de/,DE
+CBiB Galaxy,http://services.cbib.u-bordeaux2.fr/galaxy/,FR
+CPT,https://cpt.tamu.edu/galaxy-pub/,US
+ChimeRScope Galaxy,https://galaxy.unmc.edu/,US
+Cistrome,http://cistrome.org/ap/root,US
+CoSSci,http://socscicompute.ss.uci.edu/,US
+DBCLS Galaxy,http://galaxy.dbcls.jp/,JP
+Dintor,http://dintor.eurac.edu/,IT
+EpiToolKit Galaxy,http://www.epitoolkit.de/,DE
+Erasmus MC,https://bioinf-galaxian.erasmusmc.nl/galaxy/,NL
+FROG,http://ab-openlab.csir.res.in/frog/,IN
+Galaxy Europe,https://usegalaxy.eu,DE
+GIO,http://gio.sbcs.qmul.ac.uk/,UK
+GVL Melbourne,http://galaxy-mel.genome.edu.au/galaxy/,AU
+GVL Queensland,https://galaxy-qld.genome.edu.au/,AU
+GVL-Tutorial,http://galaxy-tut.genome.edu.au/galaxy/,AU
+GalaxEast,http://use.galaxeast.fr/,FR
+Galaxy Palfinder,https://palfinder.ls.manchester.ac.uk,UK
+Galaxy-CEFAP,http://cefap.icb.usp.br/galaxy,BR
+Galaxy-P,https://usegalaxyp.org/,US
+Galaxy@GenOuest,https://galaxy.genouest.org,FR
+Galaxy@PRABI,http://galaxy.prabi.fr/,FR
+Galaxy@Pasteur,https://galaxy.pasteur.fr/,FR
+Genomic Hyperbrowser,http://hyperbrowser.uio.no/hb/,NO
+GrAPPA,https://grappa.eecs.utk.edu/grappa/,US
+Halogen Bonding Galaxy,http://134.2.17.68:8081/,DE
+Huttenhower Lab,http://huttenhower.sph.harvard.edu/galaxy/,US
+IAPT,http://cloudimaging.net.au/,AU
+IBERS @ Aberystwyth Galaxy,http://share-galaxy.ibers.aber.ac.uk/,UK
+IRRI Galaxy,http://galaxy.irri.org/,PH
+ImmPort Galaxy,http://immportgalaxy.org/,US
+In Silico Galaxy,http://insilico.utulsa.edu/galaxy/,US
+Institut Curie Galaxy,https://galaxy-public.curie.fr/,FR
+Koslicki Lab Galaxy,http://math-galaxy.cgrb.oregonstate.edu:8080/,US
+LAPPS Grid,http://galaxy.lappsgrid.org/,US
+LiSIs,http://lisis.cs.ucy.ac.cy/,CY
+MBAC Metabiome Portal,http://mbac.gmu.edu:8080/,US
+MGEScan on Galaxy Workflow System,http://149.165.158.125:38080/,US
+MISSISSIPPI,http://mississippi.fr/,FR
+MPDS,http://mpds.osdd.net/,IN
+MPI-HLR Bioinformatics,https://bioinformatics.mpi-bn.mpg.de/,DE
+Main,https://usegalaxy.org,US
+Majewski Lab ExomeAI,http://genomequebec.mcgill.ca/exomeai,CA
+Martin Luther University Halle-Wittenberg,http://galaxy.informatik.uni-halle.de,DE
+MiModD NacreousMap,http://mapping-by-sequencing.vm.uni-freiburg.de:8080/,DE
+NBIC,http://galaxy.nbic.nl/,NL
+NELLY,http://www.bioinformatica.ucr.ac.cr:8080/,CR
+Nebula,http://nebula.curie.fr/,FR
+OSDDlinux LiveGalaxy,http://osddlinux.osdd.net:8001/,US
+Oqtans,https://galaxy.inf.ethz.ch/,CH
+Orione,http://orione.crs4.it/,IT
+Osiris Galaxy,http://galaxy-dev.cnsi.ucsb.edu/osiris/,US
+PGTB Galaxy,https://galaxy-pgtp.pierroton.inra.fr,FR
+PIA Galaxy,http://galaxy-dev.cnsi.ucsb.edu/pia/,US
+PhenoMeNal,http://public.phenomenal-h2020.eu/,EU
+Pitagora-Galaxy,http://try.pitagora-galaxy.org/galaxy/,JP
+PlantGenIE,http://galaxy.plantgenie.org:8080/,SE
+PreSTIGE,http://prestige.case.edu/,US
+PredPharmTox,http://galaxy.predpharmtox.org/,SE
+QBRC Galaxy,http://www.galaxy.qbrc.org/,US
+RDF2Graph,http://semantics.systemsbiology.nl/RDF2Graph/,NL
+RNA-Rocket,http://rnaseq.pathogenportal.org/,US
+RNA-Seq Portal,http://weizhongli-lab.org:8088,US
+RepeatExplorer 1,http://repeatexplorer.umbr.cas.cz/,CZ
+RiboGalaxy,http://ribogalaxy.ucc.ie/,IE
+SCDE,http://discovery.hsci.harvard.edu/galaxy/,US
+SIFTED Galaxy,http://ec2-54-88-183-115.compute-1.amazonaws.com/,US
+South Green Galaxy,http://galaxy.southgreen.fr/galaxy/,FR
+USMI Galaxy Demonstrator,http://bioinformatics.hsanmartino.it:8080,IT
+VarCap Galaxy,http://galaxy.csb.univie.ac.at:8080,AT
+Vinther Lab,http://galaxy.bio.ku.dk/,DK
+VirAmp Galaxy,http://viramp.com/,
+Wageningen UR Galaxy,https://galaxy.wur.nl/galaxy_production/,NL
+Whale Shark,http://whaleshark.georgiaaquarium.org/,US
+ZBIT Bioinformatics Toolbox,http://webservices.cs.uni-tuebingen.de,DE
+ballaxy,https://ballaxy.bioinf.uni-sb.de,DE
+deepTools2,http://deeptools.ie-freiburg.mpg.de/,DE
+kmer-SVM,http://kmersvm.beerlab.org/,US
+workflow4metabolomics,http://galaxy.workflow4metabolomics.org,FR
