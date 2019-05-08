@@ -1,122 +1,122 @@
-ABiMS,http://abims.sb-roscoff.fr,general
-ABiMS-Tools,http://abims.sb-roscoff.fr,tool-publishing
-AB-OpenLab,http://ab-openlab.csir.res.in/frog/,tool-publishing
-A-Game,http://beaconlab.it/agame,domain
-AGEseq @ AspenDB,http://aspendb.uga.edu:8085/,tool-publishing
-Alveo: Human Communication Science Virtual Laboratory ,http://alveo.edu.au/about/,domain
-ANASTASIA,http://motherbox.chemeng.ntua.gr/anastasia_dev/,general
-Antigen Receptor Galaxy (ARGalaxy),https://bioinf-galaxian.erasmusmc.nl/argalaxy/,tool-publishing
-APOSTL,http://apostl.moffitt.org/,tool-publishing
-ARGs-OAP,http://smile.hku.hk/SARGs,tool-publishing
-ARIES,https://w3.iss.it/site/aries/,domain
-BF2I-MAP,http://bf2i-galaxy.insa-lyon.fr:8080/,tool-publishing
-BioBix,http://galaxy.ugent.be/,general
-BioCiphers Lab Galaxy,http://biociphers.org/,tool-publishing
-BioMaS,http://galaxy.cloud.ba.infn.it:8080/,tool-publishing
-Biomina,http://biominavm-galaxy.biomina.be/galaxy/,general
-BIPAA (BioInformatics Platform for Agroecosystem Arthropods),https://bipaa.genouest.org/,domain
-BitLAB,http://www.bitlab-es.com/bitlab/,tool-publishing
-CAFU,https://github.com/cma2015/CAFU,domain
-CBiB Galaxy,http://services.cbib.u-bordeaux2.fr/galaxy/,general
-CellOrganizer Galaxy,http://www.cellorganizer.org/galaxy-servers/,tool-publishing
-Center for Phage Technology (CPT),https://cpt.tamu.edu/galaxy-public/,domain
-ChemFlow,https://vm-chemflow-francegrille.eu/,domain
-Chemical Annotation Retrieval Toolkit (CART),http://cart.embl.de/,tool-publishing
-ChimeRScope,https://galaxy.unmc.edu/,tool-publishing
-CIRM-CFBP,https://iris.angers.inra.fr/galaxypub-cfbp,tool-publishing
-Cistrome Analysis Pipeline,http://cistrome.org/ap/root,domain
-Codon Harmonizer,http://codonharmonizer.systemsbiology.nl/,tool-publishing
-CoSSci,http://socscicompute.ss.uci.edu/,domain
-DBCLS Galaxy,http://galaxy.dbcls.jp/,general
-deepTools,http://deeptools.github.io/,tool-publishing
-Dintor,http://dintor.eurac.edu/,domain
-epiGeEC,https://epigeec.genap.ca/galaxy/,tool-publishing
-EpiToolKit,http://www.epitoolkit.de/,tool-publishing
-Erasmus MC,https://bioinf-galaxian.erasmusmc.nl/galaxy/,general
-FreeBioinfo,http://www.freebioinfo.org/,domain
-GalaxEast,http://www.galaxeast.fr,general
-Galaxy-CEFAP,http://cefap.icb.usp.br/galaxy,domain
-Galaxy@GenOuest,https://galaxy.genouest.org,general
-Galaxy Integrated Omics (GIO),http://gio.sbcs.qmul.ac.uk/,domain
-Galaxy@Pasteur,https://galaxy.pasteur.fr/,general
-Galaxy PGTB (Virtual Biodiversity Lab),http://www.pgtb.u-bordeaux2.fr/,domain
-Galaxy-P,http://galaxyp.org/,domain
-Galaxy@PRABI,http://galaxy.prabi.fr/,general
-Galaxy Test,https://test.galaxyproject.org/,general
-GCAC : Galaxy for Compound Activity Classification,https://github.com/LynnLab-JNU/gcac-galaxy-tools,tool-publishing
-GeneLab,https://genelab.nasa.gov/,general
-Genomic Hyperbrowser,http://hyperbrowser.uio.no/hb/,domain
-GigaGalaxy,http://gigagalaxy.net/,general
-GraphClust,https://github.com/BackofenLab/GraphClust-2,tool-publishing
-GrAPPA,https://grappa.eecs.utk.edu/,domain
-Halogen Bonding,http://halogenbonding.com/,tool-publishing
-Hardwood Genomics,https://www.hardwoodgenomics.org/content/tripal-galaxy-workflows,domain
-HiCExplorer,https://hicexplorer.usegalaxy.eu,domain
-Hunter College Galaxy,http://galaxy.hunter.cuny.edu:8080/,general
-Huttenhower Lab,http://huttenhower.sph.harvard.edu/galaxy/,domain
-IBERS @ Aberystwyth,http://share-galaxy.ibers.aber.ac.uk/,tool-publishing
-Image Analysis and Processing Toolkit,http://cloudimaging.net.au/,domain
-ImmPort Galaxy,http://immportgalaxy.org/,domain
-In Silico Galaxy,http://insilico.utulsa.edu/galaxy/,tool-publishing
-Insitut Curie,https://galaxy-public.curie.fr/,general
-International Rice Research Institute (IRRI) Galaxy,https://sites.google.com/a/irri.org/iric/resources/iric-data-portal ,domain
-IRProfiler,http://irprofiler.med.auth.gr:8080/,tool-publishing
-kmer-SVM,http://kmersvm.beerlab.org/,tool-publishing
-Koslicki Lab,http://math-galaxy.cgrb.oregonstate.edu:8080/,tool-publishing
-Langille Lab,http://galaxy.morganlangille.com/,tool-publishing
-Language Analysis Portal (LAP),https://www.mn.uio.no/ifi/english/research/projects/clarino/,domain
-LAPPS Grid,http://galaxy.lappsgrid.org/,domain
-Lifeportal,https://lifeportal.uio.no,general
-LiSIs,http://lisis.cs.ucy.ac.cy/,tool-publishing
-Majewski Lab,http://genomequebec.mcgill.ca/exomeai,tool-publishing
-Mandoiu Lab,https://neo.engr.uconn.edu/,tool-publishing
-Martin Luther U. Halle-Wittenberg,http://galaxy.informatik.uni-halle.de,tool-publishing
-MBAC Metabiome Portal,http://mbac.gmu.edu:8080/,tool-publishing
-Metaproteomics Gateway,http://z.umn.edu/metaproteomicsgateway,domain
-MGEScan,http://mgescan.readthedocs.org/en/latest/server.html,tool-publishing
-MiModD NacreousMap,http://mapping-by-sequencing.vm.uni-freiburg.de:8080/,tool-publishing
-MISSISSIPPI,http://mississippi.fr/,domain
-Molecular Property Diagnostic Suite - Diabetes Mellitus Portal (MPDSDM),http://www.mpds-diabetes.in/,domain
-Molecular Property Diagnostic Suite - Tuberculosis (MPDSTB),http://mpds.osdd.net/,domain
-MPI-HLR Bioinformatics Server,https://bioinformatics.mpi-bn.mpg.de/,tool-publishing
-Nebula,http://nebula.curie.fr/,domain
-NELLY,http://www.bioinformatica.ucr.ac.cr:8080/,general
-NetworkAnalyst,https://www.networkanalyst.ca/,domain
-NGS-QC,http://galaxy.ngs-qc.org/,tool-publishing
-Oqtans,http://galaxy.inf.ethz.ch,domain
-Orione,http://orione.crs4.it/,domain
-OSDDlinux LiveGalaxy,http://osddlinux.osdd.net:8001/,domain
-Osiris,http://galaxy-dev.cnsi.ucsb.edu/osiris/,tool-publishing
-Palfinder,https://palfinder.ls.manchester.ac.uk/,tool-publishing
-PhenoMeNal,http://public.phenomenal-h2020.eu/,domain
-PIA,http://galaxy-dev.cnsi.ucsb.edu/pia/,tool-publishing
-PIPE-CLIP,http://pipeclip.qbrc.org/,tool-publishing
-Pitagora-Galaxy,http://try.pitagora-galaxy.org/galaxy/,general
-PlantGenIE,http://galaxy.plantgenie.org:8080/,domain
-PreSTIGE,http://prestige.case.edu/,tool-publishing
-Proteogenomics Gateway,http://z.umn.edu/proteogenomicsgateway,domain
-ProteoRE,http://www.proteore.org/,domain
-QBRC Galaxy,http://www.galaxy.qbrc.org/,tool-publishing
-RDF2Graph,http://semantics.systemsbiology.nl/RDF2Graph/,tool-publishing
-RepeatExplorer,http://repeatexplorer.org/,domain
-RiboGalaxy,http://ribogalaxy.ucc.ie/,domain
-RNA-Rocket @ Pathogen Portal,http://rnaseq.pathogenportal.org/,domain
-RNA Workbench,https://github.com/bgruening/galaxy-rna-workbench,domain
-SIFTED,http://thebrain.bwh.harvard.edu/sifted.html,tool-publishing
-Single Cell Omics workbench,https://singlecell.usegalaxy.eu/,domain
-South Green,http://galaxy.southgreen.fr/galaxy/,domain
-Splicescope,http://galaxy.splicebase.net/,tool-publishing
-Stem Cell Discovery Engine,http://discovery.hsci.harvard.edu/galaxy,domain
-SymD,http://symd.nci.nih.gov/,domain
-TreeGenes,http://treegenesdb.org/,domain
-Trinity CTAT Galaxy,https://galaxy.ncgas-trinity.indiana.edu/,domain
-UseGalaxy.eu,https://usegalaxy.eu,usegalaxy
-UseGalaxy.org.au,https://usegalaxy.org.au,usegalaxy
-UseGalaxy.org (Main),https://usegalaxy.org,usegalaxy
-USMI Galaxy Demonstrator,http://bioinformatics.hsanmartino.it:8080/,tool-publishing
-VarCap,http://galaxy.csb.univie.ac.at:8080/,tool-publishing
-Vinther Lab,http://galaxy.bio.ku.dk/,tool-publishing
-VirAmp,http://viramp.com/,domain
-Wageningen UR,http://galaxy.wur.nl/,tool-publishing
-Workflow4Metabolomics,http://workflow4metabolomics.org/,domain
-ZBIT Bioinformatics Toolbox,http://webservices.cs.uni-tuebingen.de/,tool-publishing
+ABiMS,http://abims.sb-roscoff.fr
+ABiMS-Tools,http://abims.sb-roscoff.fr
+AB-OpenLab,http://ab-openlab.csir.res.in/frog/
+A-Game,http://beaconlab.it/agame
+AGEseq @ AspenDB,http://aspendb.uga.edu:8085/
+Alveo: Human Communication Science Virtual Laboratory ,http://alveo.edu.au/about/
+ANASTASIA,http://motherbox.chemeng.ntua.gr/anastasia_dev/,GR
+Antigen Receptor Galaxy (ARGalaxy),https://bioinf-galaxian.erasmusmc.nl/argalaxy/,NL
+APOSTL,http://apostl.moffitt.org/,US
+ARGs-OAP,http://smile.hku.hk/SARGs,HK
+ARIES,https://w3.iss.it/site/aries/,IT
+BF2I-MAP,http://bf2i-galaxy.insa-lyon.fr:8080/,FR
+BioBix,http://galaxy.ugent.be/,BE
+BioCiphers Lab Galaxy,http://biociphers.org/,US
+BioMaS,http://galaxy.cloud.ba.infn.it:8080/,IT
+Biomina,http://biominavm-galaxy.biomina.be/galaxy/,BE
+BIPAA (BioInformatics Platform for Agroecosystem Arthropods),https://bipaa.genouest.org/,FR
+BitLAB,http://www.bitlab-es.com/bitlab/,ES
+CAFU,https://github.com/cma2015/CAFU,CN
+CBiB Galaxy,http://services.cbib.u-bordeaux2.fr/galaxy/,FR
+CellOrganizer Galaxy,http://www.cellorganizer.org/galaxy-servers/,US
+Center for Phage Technology (CPT),https://cpt.tamu.edu/galaxy-public/,US
+ChemFlow,https://vm-chemflow-francegrille.eu/,FR
+Chemical Annotation Retrieval Toolkit (CART),http://cart.embl.de/,DE
+ChimeRScope,https://galaxy.unmc.edu/,US
+CIRM-CFBP,https://iris.angers.inra.fr/galaxypub-cfbp,FR
+Cistrome Analysis Pipeline,http://cistrome.org/ap/root,US
+Codon Harmonizer,http://codonharmonizer.systemsbiology.nl/,NL
+CoSSci,http://socscicompute.ss.uci.edu/,US
+DBCLS Galaxy,http://galaxy.dbcls.jp/,JP
+deepTools,http://deeptools.github.io/,DE
+Dintor,http://dintor.eurac.edu/,US
+epiGeEC,https://epigeec.genap.ca/galaxy/,CA
+EpiToolKit,http://www.epitoolkit.de/,DE
+Erasmus MC,https://bioinf-galaxian.erasmusmc.nl/galaxy/,NL
+FreeBioinfo,http://www.freebioinfo.org/,CN
+GalaxEast,http://www.galaxeast.fr,FR
+Galaxy-CEFAP,http://cefap.icb.usp.br/galaxy,BR
+Galaxy@GenOuest,https://galaxy.genouest.org,FR
+Galaxy Integrated Omics (GIO),http://gio.sbcs.qmul.ac.uk/,UK
+Galaxy@Pasteur,https://galaxy.pasteur.fr/,FR
+Galaxy PGTB (Virtual Biodiversity Lab),http://www.pgtb.u-bordeaux2.fr/,FR
+Galaxy-P,http://galaxyp.org/,US
+Galaxy@PRABI,http://galaxy.prabi.fr/,FR
+Galaxy Test,https://test.galaxyproject.org/,US
+GCAC : Galaxy for Compound Activity Classification,https://github.com/LynnLab-JNU/gcac-galaxy-tools,IN
+GeneLab,https://genelab.nasa.gov/,US
+Genomic Hyperbrowser,http://hyperbrowser.uio.no/hb/,NO
+GigaGalaxy,http://gigagalaxy.net/,HK
+GraphClust,https://github.com/BackofenLab/GraphClust-2,DE
+GrAPPA,https://grappa.eecs.utk.edu/,US
+Halogen Bonding,http://halogenbonding.com/,DE
+Hardwood Genomics,https://www.hardwoodgenomics.org/content/tripal-galaxy-workflows,US
+HiCExplorer,https://hicexplorer.usegalaxy.eu,DE
+Hunter College Galaxy,http://galaxy.hunter.cuny.edu:8080/,US
+Huttenhower Lab,http://huttenhower.sph.harvard.edu/galaxy/,US
+IBERS @ Aberystwyth,http://share-galaxy.ibers.aber.ac.uk/,UK
+Image Analysis and Processing Toolkit,http://cloudimaging.net.au/,AU
+ImmPort Galaxy,http://immportgalaxy.org/,US
+In Silico Galaxy,http://insilico.utulsa.edu/galaxy/,US
+Insitut Curie,https://galaxy-public.curie.fr/,FR
+International Rice Research Institute (IRRI) Galaxy,https://sites.google.com/a/irri.org/iric/resources/iric-data-portal ,PH
+IRProfiler,http://irprofiler.med.auth.gr:8080/,GR
+kmer-SVM,http://kmersvm.beerlab.org/,US
+Koslicki Lab,http://math-galaxy.cgrb.oregonstate.edu:8080/,US
+Langille Lab,http://galaxy.morganlangille.com/,CA
+Language Analysis Portal (LAP),https://www.mn.uio.no/ifi/english/research/projects/clarino/,NO
+LAPPS Grid,http://galaxy.lappsgrid.org/,NO
+Lifeportal,https://lifeportal.uio.no,NO
+LiSIs,http://lisis.cs.ucy.ac.cy/,CY
+Majewski Lab,http://genomequebec.mcgill.ca/exomeai,CA
+Mandoiu Lab,https://neo.engr.uconn.edu/,US
+Martin Luther U. Halle-Wittenberg,http://galaxy.informatik.uni-halle.de,DE
+MBAC Metabiome Portal,http://mbac.gmu.edu:8080/,US
+Metaproteomics Gateway,http://z.umn.edu/metaproteomicsgateway,US
+MGEScan,http://mgescan.readthedocs.org/en/latest/server.html,US
+MiModD NacreousMap,http://mapping-by-sequencing.vm.uni-freiburg.de:8080/,DE
+MISSISSIPPI,http://mississippi.fr/,FR
+Molecular Property Diagnostic Suite - Diabetes Mellitus Portal (MPDSDM),http://www.mpds-diabetes.in/,IN
+Molecular Property Diagnostic Suite - Tuberculosis (MPDSTB),http://mpds.osdd.net/,IN
+MPI-HLR Bioinformatics Server,https://bioinformatics.mpi-bn.mpg.de/,DE
+Nebula,http://nebula.curie.fr/,FR
+NELLY,http://www.bioinformatica.ucr.ac.cr:8080/,CR
+NetworkAnalyst,https://www.networkanalyst.ca/,CA
+NGS-QC,http://galaxy.ngs-qc.org/,FR
+Oqtans,http://galaxy.inf.ethz.ch,CH
+Orione,http://orione.crs4.it/,IT
+OSDDlinux LiveGalaxy,http://osddlinux.osdd.net:8001/,IN
+Osiris,http://galaxy-dev.cnsi.ucsb.edu/osiris/,US
+Palfinder,https://palfinder.ls.manchester.ac.uk/,UK
+PhenoMeNal,http://public.phenomenal-h2020.eu/,EU
+PIA,http://galaxy-dev.cnsi.ucsb.edu/pia/,US
+PIPE-CLIP,http://pipeclip.qbrc.org/,US
+Pitagora-Galaxy,http://try.pitagora-galaxy.org/galaxy/,JP
+PlantGenIE,http://galaxy.plantgenie.org:8080/,SE
+PreSTIGE,http://prestige.case.edu/,US
+Proteogenomics Gateway,http://z.umn.edu/proteogenomicsgateway,US
+ProteoRE,http://www.proteore.org/,FR
+QBRC Galaxy,http://www.galaxy.qbrc.org/,US
+RDF2Graph,http://semantics.systemsbiology.nl/RDF2Graph/,NL
+RepeatExplorer,http://repeatexplorer.org/,CZ
+RiboGalaxy,http://ribogalaxy.ucc.ie/,IE
+RNA-Rocket @ Pathogen Portal,http://rnaseq.pathogenportal.org/,US
+RNA Workbench,https://github.com/bgruening/galaxy-rna-workbench,DE
+SIFTED,http://thebrain.bwh.harvard.edu/sifted.html,US
+Single Cell Omics workbench,https://singlecell.usegalaxy.eu/,DE
+South Green,http://galaxy.southgreen.fr/galaxy/,FR
+Splicescope,http://galaxy.splicebase.net/,US
+Stem Cell Discovery Engine,http://discovery.hsci.harvard.edu/galaxy,US
+SymD,http://symd.nci.nih.gov/,US
+TreeGenes,http://treegenesdb.org/,US
+Trinity CTAT Galaxy,https://galaxy.ncgas-trinity.indiana.edu/,US
+UseGalaxy.eu,https://usegalaxy.eu,US
+UseGalaxy.org.au,https://usegalaxy.org.au,AU
+UseGalaxy.org (Main),https://usegalaxy.org,US
+USMI Galaxy Demonstrator,http://bioinformatics.hsanmartino.it:8080/,IT
+VarCap,http://galaxy.csb.univie.ac.at:8080/,AT
+Vinther Lab,http://galaxy.bio.ku.dk/,DK
+VirAmp,http://viramp.com/,US
+Wageningen UR,http://galaxy.wur.nl/,NL
+Workflow4Metabolomics,http://workflow4metabolomics.org/,FR
+ZBIT Bioinformatics Toolbox,http://webservices.cs.uni-tuebingen.de/,DE
