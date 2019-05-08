@@ -6,21 +6,14 @@ This repository provides a machine readable list of public [Galaxy instances](ht
 - available on the public internet
 - generally available (not offline for extended periods of time)
 
-## About
-
-This list was initially seeded from a couple of sources:
-
-- [x] https://galaxyproject.org/public-galaxy-servers/
-- [x] https://beta.launch.usegalaxy.org/cloudlaunch/api/v1/public_services/
-- [x] https://github.com/bgruening/galaxy-maps/blob/master/server.geojson
-
 ## Running the Parser
 
-The Freiburg Galaxy team runs the main copy of this code, and we make our results [publicly available](https://grafana.denbi.uni-freiburg.de/dashboard/db/public-galaxy-servers). If you wish to run a copy of this code, please be considerate of the servers you are probing. We make our requests at most once per hour.
+The Freiburg Galaxy team runs the main copy of this code, and we make our results [publicly available](https://stats.galaxyproject.eu/dashboard/db/public-galaxy-servers). If you wish to run a copy of this code, please be considerate of the servers you are probing. We make our requests at most once per hour.
 
 The `process.py` script contacts every server listed in the file passed to it and collects the results as a `.json` file an output directory.
 
 ```bash
+$ make servers.csv
 $ python process.py servers.csv --json_dir log_directory
 ```
 
