@@ -9,6 +9,8 @@ import os
 import requests
 import simplejson
 logging.basicConfig(level=logging.DEBUG)
+logging.getLogger("requests").setLevel(logging.WARNING)
+logging.getLogger("urllib3").setLevel(logging.WARNING)
 CONCURRENCY = 20
 USER_AGENT = 'Galaxy Public Server Monitoring Bot (+https://github.com/martenson/public-galaxy-servers)'
 HEADERS = {'User-Agent': USER_AGENT}
