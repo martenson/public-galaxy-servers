@@ -12,6 +12,8 @@ logging.basicConfig(level=logging.DEBUG)
 CONCURRENCY = 20
 USER_AGENT = 'Galaxy Public Server Monitoring Bot (+https://github.com/martenson/public-galaxy-servers)'
 HEADERS = {'User-Agent': USER_AGENT}
+# Certificate verification is handled by requests and we want errors.
+requests.packages.urllib3.disable_warnings()
 
 
 def munge(value):
@@ -85,7 +87,6 @@ def req_json_safe(url):
 
     # Now we try decoding it as json.
     try:
-        print(r)
         data = r.json()
     except simplejson.scanner.JSONDecodeError as jse:
         logging.debug("%s json_error: %s", url, jse)
@@ -128,6 +129,24 @@ def no_api(url):
     }
 
 
+def process_elems(elems, section=None):
+    for e in elems:
+        if e['model_class'] == 'ToolSection':
+            for x in process_elems(e['elems'], section=e['name']):
+                yield x
+        elif e['model_class'][-4:] == 'Tool':
+            i = e['id'].split('/')
+            yield '/'.join(i)
+            if len(i) > 2:
+                i = '%s/%s' % (i[2], i[3])
+            else:
+                i = e['id']
+
+
+def count_tools(data):
+    return len(set(process_elems(data)))
+
+
 def process_url(url):
     logging.info("Processing %s" % url)
     (response, data) = req_json_safe(url + '/api/configuration')
@@ -143,29 +162,30 @@ def process_url(url):
     # Ok, api is responding, but main page must be as well.
     (response_index, data_index) = req_url_safe(url)
 
-    if response_index is not None and response_index.ok and 'window.Galaxy' in response_index.text:
-        return {
-            'server': url,
-            'responding': True,
-            'galaxy': True,
+    print(response_index, response_index.ok, 'window.Galaxy' in response_index.text)
 
-            'version': version,
-            # how responsive is their server
-            'response_time': response_index.elapsed.total_seconds(),
-            # What interesting features does this galaxy have.
-            'features': features,
-        }
+    tools = 0
+    lookslikegalaxy = False
+    if response_index is not None and response_index.ok and ('window.Galaxy' in response_index.text or 'toolbox_in_panel' in response_index.text):
+        lookslikegalaxy = True
 
-    if response_index:
-        return {
-            'server': url,
-            'responding': True,
-            'galaxy': False,
-            'version': version,
-            'response_time': response_index.elapsed.total_seconds(),
-            'code': response_index.status_code,
-            'features': features,
-        }
+        (response, data) = req_json_safe(url + '/api/tools')
+        if data is not None:
+            tools = count_tools(response.json())
+
+    return {
+        'server': url,
+        'responding': True,
+        'lookslikegalaxy': lookslikegalaxy,
+        'version': version,
+        # how responsive is their server
+        'response_time': response_index.elapsed.total_seconds(),
+        'code': response_index.status_code,
+        # What interesting features does this galaxy have.
+        'features': features,
+        # Tools
+        'tools': tools,
+    }
 
 
 def process_data(data):
