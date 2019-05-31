@@ -177,7 +177,7 @@ def process_url(url):
     return {
         'server': url,
         'responding': True,
-        'lookslikegalaxy': lookslikegalaxy,
+        'galaxy': lookslikegalaxy,
         'version': version,
         # how responsive is their server
         'response_time': response_index.elapsed.total_seconds(),

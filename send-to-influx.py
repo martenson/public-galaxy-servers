@@ -28,7 +28,7 @@ def generate_measurements(data):
             'tags': {
                 'location': server['location'],
                 'name': server['name'],
-                'galaxy': server['results']['lookslikegalaxy'],
+                'galaxy': server['results']['galaxy'],
                 'responding': server['results']['responding'],
                 'version': server['results'].get('version', None),
             },
@@ -55,7 +55,7 @@ def generate_measurements(data):
             })
 
         # If no galaxy is found AND no features are found (So we couldn't access the API)
-        if not server['results']['lookslikegalaxy'] and 'features' not in server['results']:
+        if not server['results']['galaxy'] and 'features' not in server['results']:
             measurement['fields']['value'] = 0
         yield measurement
 
