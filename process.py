@@ -37,19 +37,20 @@ INTERESTING_FEATURES = (
     'enable_unique_workflow_defaults',
     'ftp_upload_site',
     'has_user_tool_filters',
-    'message_box_visible',
-    'message_box_content',
-    'mailing_lists',
     'require_login',
     'server_startttime',
-    'support_url',
-    'terms_url',
-    'wiki_url',
     'use_remote_user',
-    'logo_src',
-    'logo_url',
-    'inactivity_box_content',
-    'citation_url'
+    # Helena deemed these kinda uninteresting to collect.
+    # 'message_box_visible',
+    # 'message_box_content',
+    # 'mailing_lists',
+    # 'support_url',
+    # 'terms_url',
+    # 'wiki_url',
+    # 'logo_src',
+    # 'logo_url',
+    # 'inactivity_box_content',
+    # 'citation_url'
 )
 
 
@@ -65,15 +66,15 @@ def req_url_safe(url):
         r = requests.get(url, timeout=60, verify=False, headers=HEADERS)
     except requests.exceptions.ConnectTimeout:
         # If we cannot connect in time
-        logging.debug("%s down, connect timeout", url)
+        logging.exception("%s down, connect timeout", url)
         return None, 'connect'
-    except requests.exceptions.SSLError as sle:
+    except requests.exceptions.SSLError:
         # Or they have invalid SSL
-        logging.debug("%s down, bad ssl: %s", url, sle)
+        logging.exception("%s down, bad ssl", url)
         return None, 'ssl'
-    except Exception as exc:
+    except Exception:
         # Or there is some OTHER exception
-        logging.debug("%s down", url)
+        logging.exception("%s down", url)
         return None, 'unk'
     # Ok, hopefully here means we've received a good response
     logging.debug("%s ok", url)
