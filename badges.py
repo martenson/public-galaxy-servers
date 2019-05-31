@@ -62,7 +62,7 @@ for t in range(-24 * 30, 0):
             continue
 
         results[server['name']].append(
-            server['results']['galaxy'] or 'features' in server['results']
+            server['results']['lookslikegalaxy'] or 'features' in server['results']
         )
 
 html_data = """
