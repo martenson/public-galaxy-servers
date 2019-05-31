@@ -12,4 +12,3 @@ script:
 - cat /tmp/201*.json | jq .[0]._reqtime | grep -e '20[0-9][0-9]-[0-9][0-9]-[0-9][0-9]'
 - cat /tmp/201*.json | jq .[0].results.responding | grep true
 - cat /tmp/201*.json | jq .[0].results.lookslikegalaxy | grep true
-- cat /tmp/201*.json | jq .[0].results.features.wiki_url | grep galaxyproject.org
