@@ -38,6 +38,7 @@ def generate_measurements(data):
                 'code': server['results'].get('code', 0),
                 'response_time': server['results']['response_time'],
                 'gx_version': float(server['results'].get('version', 0)),
+                'tools': server['results'].get('tools', 0),
             }
         }
 
