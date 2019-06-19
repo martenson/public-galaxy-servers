@@ -26,7 +26,7 @@ def generate_measurements(data):
         measurement = {
             'measurement': 'server',
             'tags': {
-                'location': server['location'],
+                'location': server.get('location', ''),
                 'name': server['name'],
                 'galaxy': server['results']['galaxy'],
                 'responding': server['results']['responding'],
