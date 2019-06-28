@@ -48,6 +48,8 @@ def generate_measurements(data):
                 'allow_user_dataset_purge': server['results']['features'].get('allow_user_dataset_purge', False),
                 'enable_communication_server': server['results']['features'].get('enable_communication_server', False),
                 'enable_openid': server['results']['features'].get('enable_openid', False),
+                'enable_oidc': server['results']['features'].get('enable_oidc', False),
+                'enable_oidc_elixir': 'elixir' in server['results']['features'].get('oidc', []),
                 'enable_quotas': server['results']['features'].get('enable_quotas', False),
                 'enable_unique_workflow_defaults': server['results']['features'].get('enable_unique_workflow_defaults', False),
                 'has_user_tool_filters': server['results']['features'].get('has_user_tool_filters', False),
