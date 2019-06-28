@@ -35,6 +35,8 @@ INTERESTING_FEATURES = (
     'brand',
     'enable_communication_server',
     'enable_openid',
+    'enable_oidc',
+    'oidc',
     'enable_quotas',
     'enable_unique_workflow_defaults',
     'ftp_upload_site',
