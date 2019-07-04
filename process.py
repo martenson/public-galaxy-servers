@@ -112,7 +112,7 @@ def no_api(url):
             'galaxy': False,
         }
 
-    if response.ok:
+    if response and response.ok:
         if 'window.Galaxy' in response.text \
                 or 'galaxyIcon_noText.png' in response.text \
                 or 'iframe#galaxy_main' in response.text:
