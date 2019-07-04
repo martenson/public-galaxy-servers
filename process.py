@@ -112,7 +112,7 @@ def no_api(url):
             'galaxy': False,
         }
 
-    if response and response.ok:
+    if response.ok:
         if 'window.Galaxy' in response.text \
                 or 'galaxyIcon_noText.png' in response.text \
                 or 'iframe#galaxy_main' in response.text:
@@ -195,13 +195,17 @@ def process_url(url):
 
 def process_data(data):
     # Clone it
-    server = dict(data)
-    # Update it with results of processing
-    results = process_url(data['url'].rstrip('/'))
-    if results:
-        server.update({'results': results})
-    server.update({'_reqtime': datetime.datetime.utcnow().isoformat()})
-    return server
+    try:
+        server = dict(data)
+        # Update it with results of processing
+        results = process_url(data['url'].rstrip('/'))
+        if results:
+            server.update({'results': results})
+        server.update({'_reqtime': datetime.datetime.utcnow().isoformat()})
+        return server
+    except Exception:
+        # something super bad happened
+        return {}
 
 
 if __name__ == '__main__':
