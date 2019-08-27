@@ -171,7 +171,7 @@ def process_url(url):
 
     tools = 0
     lookslikegalaxy = False
-    if response_index is not None and response_index.ok and ('window.Galaxy' in response_index.text or 'toolbox_in_panel' in response_index.text):
+    if response_index is not None and response_index.ok and ('window.Galaxy' in response_index.text or 'toolbox_in_panel' in response_index.text or 'The Galaxy analysis interface' in response_index.text):
         lookslikegalaxy = True
 
         (response, data) = req_json_safe(url + '/api/tools')
