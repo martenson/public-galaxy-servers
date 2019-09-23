@@ -27,7 +27,7 @@ $ python badges.py log_directory output-badges
 
 ## Data Format
 
-`servers.csv` is stored as a CSV file with a single header line. The columns are:
+`servers.csv` is created as a CSV file with a single header line. The columns are:
 
 Column     | Example               | Meaning
 ---------- | --------------------- | ---------------------
@@ -39,7 +39,7 @@ Column     | Example               | Meaning
 
 ## Help us!
 
-This list is never complete. Please feel free to [add your own server](https://github.com/martenson/public-galaxy-servers/edit/master/servers.csv) if your instance meets the requirements.
+This list is never complete. Please feel free to [add your own server](https://docs.google.com/forms/d/e/1FAIpQLSd4xzUP3pSYjTHiLoRE10zSJbplDVW7EbGy8EJ9JS0yy2SySg/viewform) if your instance meets the requirements.
 
 ## Scripts
 
