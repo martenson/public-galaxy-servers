@@ -1,4 +1,4 @@
-# Public Galaxy Servers [![Build Status](https://travis-ci.org/martenson/public-galaxy-servers.svg?branch=master)](https://travis-ci.org/martenson/public-galaxy-servers)
+# Public Galaxy Servers
 
 This repository provides a machine readable list of public [Galaxy instances](https://github.com/galaxyproject/galaxy/). Instances listed here must be:
 
