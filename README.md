@@ -8,7 +8,7 @@ This repository provides a machine readable list of public [Galaxy instances](ht
 
 ## Running the Parser
 
-The Freiburg Galaxy team runs the main copy of this code, and we make our results [publicly available](https://stats.galaxyproject.eu/dashboard/db/public-galaxy-servers). If you wish to run a copy of this code, please be considerate of the servers you are probing. We make our requests at most once per hour.
+The European Galaxy team runs the main copy of this code, and we make our results [publicly available](https://stats.galaxyproject.eu/d/000000020/public-galaxy-servers?orgId=1). If you wish to run a copy of this code, please be considerate of the servers you are probing. We make our requests at most once per hour.
 
 The `process.py` script contacts every server listed in the file passed to it and collects the results as a `.json` file an output directory.
 
